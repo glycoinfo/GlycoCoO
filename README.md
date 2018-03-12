@@ -1,0 +1,2 @@
+# GlycoCoO
+GlycoConjugate Ontology
