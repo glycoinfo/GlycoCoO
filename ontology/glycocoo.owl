@@ -115,13 +115,13 @@ glycan:glycosylated_at rdfs:range glycan:Glycosylation_site ;
 
 glycan:has_association a owl:ObjectProperty ;
 	rdfs:domain glycan:Referenced_compound ;
-	rdfs:range codao:Compound_disease_association ;
+	rdfs:range sio:SIO_000897 ;
 	rdfs:label "has association"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#has_attached_glycan
 
 glycan:has_attached_glycan a owl:ObjectProperty ;
-	rdfs:domain glycan:Glycoconjugate ;
+	rdfs:domain glycan:Glycoconjugate , glycan:glycoconjugate ;
 	rdfs:range glycan:Saccharide , glycan:saccharide ;
 	rdfs:comment "This property is used to specify a glycan portion of a glycoconjugate compound."^^xsd:string .
 # 
@@ -144,39 +144,40 @@ glycan:has_glycosylated_AA a owl:ObjectProperty ;
 	rdfs:domain _:genid9 .
 
 _:genid9 a owl:Class ;
-	owl:unionOf _:genid12 .
-
-_:genid12 a rdf:List ;
-	rdf:first glycan:Referenced_protein ;
-	rdf:rest _:genid11 .
+	owl:unionOf _:genid11 .
 
 _:genid11 a rdf:List ;
-	rdf:first glycan:glycopeptide ;
+	rdf:first glycan:Glycoprotein ;
 	rdf:rest _:genid10 .
 
 _:genid10 a rdf:List ;
-	rdf:first glycan:glycoprotein ;
+	rdf:first glycan:Referenced_protein ;
 	rdf:rest rdf:nil .
 
-glycan:has_glycosylated_AA rdfs:domain _:genid13 .
+glycan:has_glycosylated_AA rdfs:domain _:genid12 .
 
-_:genid13 a owl:Class ;
+_:genid12 a owl:Class ;
 	owl:unionOf _:genid15 .
 
 _:genid15 a rdf:List ;
-	rdf:first glycan:glycopeptide ;
+	rdf:first glycan:Referenced_protein ;
 	rdf:rest _:genid14 .
 
 _:genid14 a rdf:List ;
+	rdf:first glycan:glycopeptide ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
 	rdf:first glycan:glycoprotein ;
 	rdf:rest rdf:nil .
 
-glycan:has_glycosylated_AA rdfs:range glycan:Glycosylated_AA ;
+glycan:has_glycosylated_AA rdfs:range glycan:Glycosylated_AA , glycan:glycosylated_AA ;
 	rdfs:comment "This property is used to specify a glycosylated amino acid residue in an object glycoprotein or glycopeptide. "^^xsd:string .
 # 
 # http://purl.jp/bio/12/glyco/glycan#has_lipid
 
 glycan:has_lipid a owl:ObjectProperty ;
+	rdfs:subPropertyOf glycan:has_compound ;
 	rdfs:domain glycan:Referenced_lipid ;
 	rdfs:range glycan:Glycolipid ;
 	rdfs:label "has lipid"@en .
@@ -184,30 +185,10 @@ glycan:has_lipid a owl:ObjectProperty ;
 # http://purl.jp/bio/12/glyco/glycan#has_protein
 
 glycan:has_protein a owl:ObjectProperty ;
+	rdfs:subPropertyOf glycan:has_compound ;
 	rdfs:domain glycan:Referenced_protein ;
-	rdfs:range glycan:glycoprotein ;
+	rdfs:range glycan:Glycoprotein ;
 	rdfs:label "has protein"@en .
-# 
-# http://purl.jp/bio/12/glyco/glycan#has_referenced_lipid
-
-glycan:has_referenced_lipid a owl:ObjectProperty ;
-	rdfs:domain glycan:Referenced_compound ;
-	rdfs:range glycan:Referenced_lipid ;
-	rdfs:label "has refrerenced lipid"@en .
-# 
-# http://purl.jp/bio/12/glyco/glycan#has_referenced_protein
-
-glycan:has_referenced_protein a owl:ObjectProperty ;
-	rdfs:domain glycan:Referenced_compound ;
-	rdfs:range glycan:Referenced_protein ;
-	rdfs:label "has referenced protein"@en .
-# 
-# http://purl.jp/bio/12/glyco/glycan#has_referenced_saccharide
-
-glycan:has_referenced_saccharide a owl:ObjectProperty ;
-	rdfs:domain glycan:Referenced_compound ;
-	rdfs:range glycan:Referenced_saccharide ;
-	rdfs:label "has referenced saccharide"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#has_saccharide
 
@@ -226,14 +207,15 @@ glycan:has_saccharide_set a owl:ObjectProperty ;
 # http://purl.jp/bio/12/glyco/glycan#has_taxon
 
 glycan:has_taxon a owl:ObjectProperty , owl:FunctionalProperty ;
-	rdfs:domain glycan:source_natural ;
+	rdfs:domain glycan:Source_natural , glycan:source_natural ;
+	rdfs:range up:Taxon ;
 	rdfs:comment "Species information of the source."^^xsd:string .
 # 
 # http://purl.jp/bio/12/glyco/glycan#is_from_source
 
 glycan:is_from_source a owl:ObjectProperty ;
 	rdfs:domain glycan:Referenced_compound , glycan:referenced_compound ;
-	rdfs:range glycan:Source ;
+	rdfs:range glycan:Source , glycan:source ;
 	rdfs:comment "Source annotation for a referenced compound."^^xsd:string .
 # 
 # http://purl.jp/bio/12/glyco/glycan#method
@@ -273,11 +255,11 @@ _:genid16 a owl:Class ;
 	owl:unionOf _:genid18 .
 
 _:genid18 a rdf:List ;
-	rdf:first glycan:Referenced_compound ;
+	rdf:first glycan:Evidence ;
 	rdf:rest _:genid17 .
 
 _:genid17 a rdf:List ;
-	rdf:first glycan:evidence ;
+	rdf:first glycan:Referenced_compound ;
 	rdf:rest rdf:nil .
 
 glycan:published_in rdfs:domain _:genid19 .
@@ -423,7 +405,7 @@ faldo:position rdfs:comment "Denoted in 1-based closed coordinates, i.e. the pos
 # http://purl.jp/bio/12/glyco/glycan#amino__acid_length
 
 glycan:amino__acid_length a owl:DatatypeProperty ;
-	rdfs:domain glycan:glycoprotein ;
+	rdfs:domain glycan:Glycoprotein ;
 	rdfs:range xsd:integer ;
 	rdfs:label "amino acid length"@en .
 # 
@@ -458,7 +440,7 @@ _:genid25 a owl:Restriction ;
 	owl:onProperty faldo:position ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-faldo:ExactPosition owl:disjointWith faldo:InBetweenPosition , faldo:InRangePosition , faldo:OneOfPosition ;
+faldo:ExactPosition owl:disjointWith faldo:OneOfPosition ;
 	rdfs:comment "A position that is exactly known."^^xsd:string ;
 	rdfs:label "Exact position"^^xsd:string .
 # 
@@ -468,16 +450,6 @@ faldo:FuzzyPosition a owl:Class ;
 	rdfs:subClassOf faldo:Position ;
 	rdfs:comment "A position that lacks exact data."^^xsd:string ;
 	rdfs:label "Fuzzy position"^^xsd:string .
-# 
-# http://biohackathon.org/resource/faldo#InBetweenPosition
-
-faldo:InBetweenPosition a owl:Class ;
-	owl:disjointWith faldo:OneOfPosition .
-# 
-# http://biohackathon.org/resource/faldo#InRangePosition
-
-faldo:InRangePosition a owl:Class ;
-	owl:disjointWith faldo:OneOfPosition .
 # 
 # http://biohackathon.org/resource/faldo#OneOfPosition
 
@@ -516,6 +488,10 @@ glycan:Citation a owl:Class ;
 
 glycan:Compound a owl:Class .
 # 
+# http://purl.jp/bio/12/glyco/glycan#Evidence
+
+glycan:Evidence a owl:Class .
+# 
 # http://purl.jp/bio/12/glyco/glycan#From
 
 glycan:From a owl:Class ;
@@ -532,10 +508,14 @@ glycan:Glycolipid a owl:Class ;
 	rdfs:comment "Lipid with saccharide(s) attached by glycosidic bond(s). "^^xsd:string ;
 	rdfs:label "Glycolipid"^^xsd:string .
 # 
+# http://purl.jp/bio/12/glyco/glycan#Glycopeptide
+
+glycan:Glycopeptide a owl:Class .
+# 
 # http://purl.jp/bio/12/glyco/glycan#Glycoprotein
 
 glycan:Glycoprotein a owl:Class ;
-	rdfs:subClassOf glycan:Glycoconjugate ;
+	rdfs:subClassOf glycan:Glycoconjugate , up:Protein ;
 	rdfs:comment "A compound that consists of protein and glycan parts; they are covalently attached to each other by a glycosidic bond. There are reasons or traces that at least one amino acid residue of the protein is glycosylated."^^xsd:string ;
 	rdfs:label "Glycoprotein"@en , "Glycoprotein"^^xsd:string , """Initial class name is capitalized.
 \"glycan:Glycoprotein"""@en .
@@ -557,6 +537,7 @@ glycan:Glycosylation_site a owl:Class ;
 # http://purl.jp/bio/12/glyco/glycan#Modified_saccharide
 
 glycan:Modified_saccharide a owl:Class ;
+	rdfs:subClassOf glycan:Saccharide ;
 	rdfs:label "Modified Saccharide"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Reduction
@@ -636,7 +617,8 @@ glycan:compound a owl:Class ;
 # 
 # http://purl.jp/bio/12/glyco/glycan#evidence
 
-glycan:evidence a owl:Class .
+glycan:evidence a owl:Class ;
+	rdfs:subClassOf glycan:Evidence .
 # 
 # http://purl.jp/bio/12/glyco/glycan#glycoconjugate
 
@@ -645,7 +627,8 @@ glycan:glycoconjugate a owl:Class ;
 # 
 # http://purl.jp/bio/12/glyco/glycan#glycopeptide
 
-glycan:glycopeptide a owl:Class .
+glycan:glycopeptide a owl:Class ;
+	rdfs:subClassOf glycan:Glycopeptide .
 # 
 # http://purl.jp/bio/12/glyco/glycan#glycoprotein
 
@@ -732,9 +715,26 @@ up:Taxon rdfs:comment "An element of a taxonomy for classifying life forms."^^xs
 	rdfs:label "Taxon"^^xsd:string ;
 	rdfs:seeAlso <http://www.ncbi.nlm.nih.gov/books/NBK54428/> .
 # 
+# http://semanticscience.org/resource/SIO_000000
+
+sio:SIO_000000 a owl:Class .
+# 
+# http://semanticscience.org/resource/SIO_000052
+
+sio:SIO_000052 a owl:Class .
+# 
 # http://semanticscience.org/resource/SIO_000074
 
-sio:SIO_000074 a owl:Class .
+sio:SIO_000074 a owl:Class ;
+	rdfs:subClassOf sio:SIO_000052 ;
+	dc:identifier "SIO_000074" ;
+	<http://purl.org/dc/terms/description> "A unit of measurement is a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "unit of measurement"@en .
+# 
+# http://semanticscience.org/resource/SIO_000075
+
+sio:SIO_000075 a owl:Class .
 # 
 # http://semanticscience.org/resource/SIO_000257
 
@@ -742,7 +742,18 @@ sio:SIO_000257 a owl:Class .
 # 
 # http://semanticscience.org/resource/SIO_000897
 
-sio:SIO_000897 a owl:Class .
+sio:SIO_000897 a owl:Class ;
+	rdfs:subClassOf sio:SIO_000075 , _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty sio:SIO_000628 ;
+	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+	owl:onClass sio:SIO_000000 .
+
+sio:SIO_000897 dc:identifier "SIO_000897" ;
+	<http://purl.org/dc/terms/description> "An assocation is a relationship between two or more entities derived by some informational analysis."@en ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "association"@en .
 # 
 # http://semanticscience.org/resource/SIO_001018
 
@@ -760,9 +771,9 @@ sio:SIO_010007 a owl:Class .
 # http://semanticscience.org/resource/SIO_010497
 
 sio:SIO_010497 a owl:Class ;
-	rdfs:subClassOf sio:SIO_010506 , _:genid30 .
+	rdfs:subClassOf sio:SIO_010506 , _:genid31 .
 
-_:genid30 a owl:Restriction ;
+_:genid31 a owl:Restriction ;
 	owl:onProperty sio:SIO_000369 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass sio:SIO_010007 .
