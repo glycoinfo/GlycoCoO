@@ -418,6 +418,7 @@ faldo:position rdfs:comment "Denoted in 1-based closed coordinates, i.e. the pos
 glycan:amino__acid_length a owl:DatatypeProperty ;
 	rdfs:domain glycan:Glycoprotein ;
 	rdfs:range xsd:integer ;
+	rdfs:comment "The number of amino acids of protein or peptide."@en ;
 	rdfs:label "amino acid length"@en .
 # 
 # http://semanticscience.org/resource/SIO_000300
