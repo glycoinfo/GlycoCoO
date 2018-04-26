@@ -487,6 +487,7 @@ codao:Compound_disease_association a owl:Class ;
 # http://purl.jp/bio/12/glyco/glycan#Alditol
 
 glycan:Alditol a owl:Class ;
+	rdfs:comment "The compound obtained by reduction aldehyde or keto group in a saccharide."@en ;
 	rdfs:label "Alditol"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Citation
@@ -507,6 +508,7 @@ glycan:Evidence a owl:Class .
 # http://purl.jp/bio/12/glyco/glycan#From
 
 glycan:From a owl:Class ;
+	rdfs:comment "Lower value in the ratio."@en ;
 	rdfs:label "From"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Glycoconjugate
@@ -550,11 +552,13 @@ glycan:Glycosylation_site a owl:Class ;
 
 glycan:Modified_saccharide a owl:Class ;
 	rdfs:subClassOf glycan:Saccharide ;
+	rdfs:comment "Chemically modified saccharide."@en ;
 	rdfs:label "Modified Saccharide"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Reduction
 
 glycan:Reduction a owl:Class ;
+	rdfs:comment "Reduction reaction of aldose or ketose."@en ;
 	rdfs:label "Reduction"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Referenced_compound
@@ -568,23 +572,27 @@ glycan:Referenced_compound a owl:Class ;
 
 glycan:Referenced_lipid a owl:Class ;
 	rdfs:subClassOf glycan:Referenced_compound ;
+	rdfs:comment "Correlation class, which connects  a Glycolipid, Glycosylation_site, and Referenced_Saccharide class."@en ;
 	rdfs:label "Referenced Lipid"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Referenced_protein
 
 glycan:Referenced_protein a owl:Class ;
 	rdfs:subClassOf glycan:Referenced_compound ;
+	rdfs:comment "Correlation class, which connects  a protein compex, Glycoprotein, Glycosylation_site, glycosylated_AA and Referenced_Saccharide class."@en ;
 	rdfs:label "Referenced Protein"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Referenced_saccharide
 
 glycan:Referenced_saccharide a owl:Class ;
 	rdfs:subClassOf glycan:Referenced_compound ;
+	rdfs:comment "Correlation class, which connects  a Saccharide, Relative_abundance, Saccharide_set, Glycosylation_site and Referenced_protein/lipid class."@en ;
 	rdfs:label "Referenced Saccharide"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Relative_abundance
 
 glycan:Relative_abundance a owl:Class ;
+	rdfs:comment "Relative abundance ratio of saccharides."@en ;
 	rdfs:label "Relative Abundance"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Saccharide
@@ -598,6 +606,7 @@ glycan:Saccharide a owl:Class ;
 # http://purl.jp/bio/12/glyco/glycan#Saccharide_set
 
 glycan:Saccharide_set a owl:Class ;
+	rdfs:comment "Several saccharides grouped together or considered as a whole."@en ;
 	rdfs:label "Saccharide Set"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Source
@@ -615,6 +624,7 @@ glycan:Source_natural a owl:Class ;
 # http://purl.jp/bio/12/glyco/glycan#To
 
 glycan:To a owl:Class ;
+	rdfs:comment "Upper value in the ratio."@en ;
 	rdfs:label "To"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#citation
