@@ -16,7 +16,7 @@
 <http://purl.jp/bio/12/glyco/glycoconjugate> a owl:Ontology ;
 	<http://purl.org/dc/terms/modified> "2018-04-26"@en ;
 	dc:creator "Issaku Yamada"@en , "Daisuke Shinmachi"@en ;
-	owl:versionInfo "0.3.1"@en ;
+	owl:versionInfo "0.4.0"@en ;
 	dc:creator "Kiyoko Aoki-Kinoshita"@en .
 # 
 # 
@@ -302,6 +302,14 @@ sio:SIO_000001 a owl:ObjectProperty .
 # http://semanticscience.org/resource/SIO_000008
 
 sio:SIO_000008 a owl:ObjectProperty .
+# 
+# http://semanticscience.org/resource/SIO_000059
+
+sio:SIO_000059 a owl:ObjectProperty .
+# 
+# http://semanticscience.org/resource/SIO_000095
+
+sio:SIO_000095 a owl:ObjectProperty .
 # 
 # http://semanticscience.org/resource/SIO_000212
 
@@ -591,7 +599,8 @@ glycan:Saccharide_set a owl:Class ;
 # 
 # http://purl.jp/bio/12/glyco/glycan#Source
 
-glycan:Source a owl:Class .
+glycan:Source a owl:Class ;
+	owl:equivalentClass glycan:source .
 # 
 # http://purl.jp/bio/12/glyco/glycan#Source_natural
 
@@ -646,8 +655,7 @@ glycan:saccharide a owl:Class .
 # 
 # http://purl.jp/bio/12/glyco/glycan#source
 
-glycan:source a owl:Class ;
-	rdfs:subClassOf glycan:Source .
+glycan:source a owl:Class .
 # 
 # http://purl.jp/bio/12/glyco/glycan#source_natural
 
@@ -732,12 +740,26 @@ sio:SIO_000075 a owl:Class .
 
 sio:SIO_000257 a owl:Class .
 # 
-# http://semanticscience.org/resource/SIO_000897
+# http://semanticscience.org/resource/SIO_000289
 
-sio:SIO_000897 a owl:Class ;
+sio:SIO_000289 a owl:Class ;
 	rdfs:subClassOf sio:SIO_000075 , _:genid23 .
 
 _:genid23 a owl:Restriction ;
+	owl:onProperty sio:SIO_000059 ;
+	owl:allValuesFrom sio:SIO_000000 .
+
+sio:SIO_000289 dc:identifier "SIO_000289" ;
+	<http://purl.org/dc/terms/description> "A set is a collection of entities, for which there may be zero members."@en ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "set"@en .
+# 
+# http://semanticscience.org/resource/SIO_000897
+
+sio:SIO_000897 a owl:Class ;
+	rdfs:subClassOf sio:SIO_000075 , _:genid24 .
+
+_:genid24 a owl:Restriction ;
 	owl:onProperty sio:SIO_000628 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass sio:SIO_000000 .
@@ -756,6 +778,20 @@ sio:SIO_001018 a owl:Class ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
 	rdfs:label "ratio"@en .
 # 
+# http://semanticscience.org/resource/SIO_001258
+
+sio:SIO_001258 a owl:Class ;
+	rdfs:subClassOf sio:SIO_000075 , _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty sio:SIO_000095 ;
+	owl:someValuesFrom sio:SIO_000289 .
+
+sio:SIO_001258 dc:identifier "SIO_001258" ;
+	<http://purl.org/dc/terms/description> "set item is an item in a set."@en ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "set item"@en .
+# 
 # http://semanticscience.org/resource/SIO_010007
 
 sio:SIO_010007 a owl:Class .
@@ -763,9 +799,9 @@ sio:SIO_010007 a owl:Class .
 # http://semanticscience.org/resource/SIO_010497
 
 sio:SIO_010497 a owl:Class ;
-	rdfs:subClassOf sio:SIO_010506 , _:genid24 .
+	rdfs:subClassOf sio:SIO_010506 , _:genid26 .
 
-_:genid24 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty sio:SIO_000369 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass sio:SIO_010007 .
