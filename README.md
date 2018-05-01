@@ -2,7 +2,7 @@
 Glycoconjugate Ontology (GlycoCoO) is a standard ontology for glycoconjugate data (glycoprotein/glycolipid structures, publication information, biological source information, experimental data).
 
 ## Current version of GlycoCoO
-Ontology: https://github.com/glycoinfo/GlycoCoO/blob/master/ontology/GlycoCoO.owl
+Ontology: https://github.com/glycoinfo/GlycoCoO/blob/master/ontology/glycocoo.owl
 
 
 ## List of developers
