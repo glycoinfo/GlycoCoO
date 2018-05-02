@@ -1,0 +1,4 @@
+2018-05-02
+Change PREFIX URI - Issaku
+gco: <http://purl.jp/bio/12/glyco/conjugate#>
+
