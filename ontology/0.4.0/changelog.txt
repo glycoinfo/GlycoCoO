@@ -1,4 +1,9 @@
 2018-05-02
 Add RDF schema files - Issaku
-	GlycoCoO.jpg	GlycoCoO.png	GlycoCoO.svg	GlycoCoO.xml
+	GlycoCoO.jpg
+	GlycoCoO.png
+	GlycoCoO.svg
+	GlycoCoO.xml
 
+GlycoCoO.xml is a draw.io file.
+ * https://www.draw.io/
