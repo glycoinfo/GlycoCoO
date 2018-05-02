@@ -18,6 +18,7 @@ An overview of all database providers generated GlycoCoO file is available in th
 ## List of prefix
 | Namespaces |                                               |
 |------------|-----------------------------------------------|
+| gco:    | <http://purl.jp/bio/12/glyco/conjugate#>         |
 | glycan:    | <http://purl.jp/bio/12/glyco/glycan#>         |
 | faldo:     | <http://biohackathon.org/resource/faldo#>     |
 | sio:     | <http://semanticscience.org/resource/>     |
