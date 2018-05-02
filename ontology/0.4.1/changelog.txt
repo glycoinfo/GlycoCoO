@@ -2,3 +2,18 @@
 Change PREFIX URI - Issaku
 gco: <http://purl.jp/bio/12/glyco/conjugate#>
 
+
+## Delete/Remove
+Classes
+* glycan:From
+* glycan:To
+* glycan:Alditol
+
+### Properties
+Porperties
+* glycan:has_saccharide
+* glycan:from
+* glycan:to
+* glycan:has_attached_glycan
+* glycan:modified
+* glycan:percentage
