@@ -26,6 +26,7 @@ An overview of all database providers generated GlycoCoO file is available in th
 | uo:        | <http://purl.obolibrary.org/obo/uo#>          |
 | up:        | <http://purl.uniprot.org/core/>               |
 | skos:      | <http://www.w3.org/2004/02/skos/core#>        |
+| unicarbkb: | <http://purl.org/unicarbkb>                  |
 
 
 ## Citation
