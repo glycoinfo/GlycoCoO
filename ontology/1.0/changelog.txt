@@ -1,0 +1,12 @@
+2018-05-30
+author: Daisuke Shinmachi
+
+## Remove
+Classes
+* glycan:Modified_saccharide
+* glycan:Reduction
+
+Properties
+* glycan:modification_method
+* glycan:unmodified_glycan
+
