@@ -1,14 +1,16 @@
 ```
 <Glycoconjugate>
+        a glycan:Glycoconjugate ;
         glycan:published_in <Citation> .
         
 <Protein>
         a gco:Referenced_protein ;
-        rdfs:subclassOf <Glycoconjugate> ;
         gco:has_attached_referenced_saccharide <Saccharide> ;
         gco:has_protein <Protein/P1> ;
         gco:has_saccharide_set <Set> .
-        
+
+glycan:Protein rdfs:subclassOf glycan:Glycoconjugate .
+
 <Protein/P1>
         gco:glycosylated_at <Protein/P1/R> .
         
