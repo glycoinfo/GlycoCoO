@@ -1,6 +1,6 @@
 ```
 <Glycoconjugate>
-        a glycan:Glycoconjugate ;
+        a glycan:Referenced_compound ;
         glycan:published_in <Citation> .
         
 <Protein>
@@ -9,7 +9,7 @@
         gco:has_protein <Protein/P1> ;
         gco:has_saccharide_set <Set> .
 
-glycan:Protein rdfs:subclassOf glycan:Glycoconjugate .
+glycan:Referenced_protein rdfs:subclassOf glycan:Referenced_compound .
 
 <Protein/P1>
         gco:glycosylated_at <Protein/P1/R> .
