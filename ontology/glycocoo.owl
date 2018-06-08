@@ -258,13 +258,6 @@ glycan:has_lipid a owl:ObjectProperty ;
 	rdfs:comment "This property is used to specify the lipid component of a glycolipid."@en ;
 	rdfs:label "has lipid"@en .
 # 
-# http://purl.jp/bio/12/glyco/glycan#has_saccharide
-
-glycan:has_saccharide a owl:ObjectProperty ;
-	rdfs:range gco:Referenced_saccharide ;
-	rdfs:comment "This property is used to specify the saccharide component of a glycoconjugate."@en ;
-	rdfs:label "has saccharide"@en .
-# 
 # http://purl.jp/bio/12/glyco/glycan#has_saccharide_set
 
 glycan:has_saccharide_set a owl:ObjectProperty ;
@@ -292,12 +285,6 @@ glycan:is_from_source a owl:ObjectProperty ;
 glycan:method a owl:ObjectProperty ;
 	rdfs:comment "This property is used to specify the method type of chemical modification process."@en ;
 	rdfs:label "method"@en .
-# 
-# http://purl.jp/bio/12/glyco/glycan#modified_glycan
-
-glycan:modified_glycan a owl:ObjectProperty ;
-	rdfs:comment "This property is used to specify the modified glycan by chemical modification process."@en ;
-	rdfs:label "modified glycan"@en .
 # 
 # http://purl.jp/bio/12/glyco/glycan#published_in
 
