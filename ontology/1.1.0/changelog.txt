@@ -8,3 +8,7 @@ Class
 Properties
 * gco:has_saccharide_part
 * gco:has_protein_part
+
+## Remove
+* modified glycan (-> sample prep)
+* has saccharide (-> has_saccharide_part)
