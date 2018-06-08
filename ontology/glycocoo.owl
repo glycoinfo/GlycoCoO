@@ -15,9 +15,10 @@
 @prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
 
 <http://purl.jp/bio/12/glyco/glycoconjugate> a owl:Ontology ;
-	owl:versionInfo "1.0"@en ;
-	<http://purl.org/dc/terms/modified> "2018-04-26"@en ;
-	dc:creator "Issaku Yamada"@en , "Daisuke Shinmachi"@en , "Kiyoko Aoki-Kinoshita"@en .
+	<http://purl.org/dc/terms/modified> "2018-06-8"@en ;
+	dc:creator "Issaku Yamada"@en ;
+	owl:versionInfo "1.1.0"@en ;
+	dc:creator "Daisuke Shinmachi"@en , "Kiyoko Aoki-Kinoshita"@en .
 # 
 # 
 # #################################################################
@@ -137,6 +138,22 @@ gco:has_protein a owl:ObjectProperty ;
 	rdfs:range glycan:Glycoprotein ;
 	rdfs:comment "This property is used to specify the protein component of a glycoprotein."@en ;
 	rdfs:label "has protein"@en .
+# 
+# http://purl.jp/bio/12/glyco/conjugate#has_protein_part
+
+gco:has_protein_part a owl:ObjectProperty ;
+	rdfs:domain gco:Referenced_glycoconjugate ;
+	rdfs:range gco:Referenced_protein ;
+	rdfs:comment "\"has protein part\" is a relation between a referenced glycoconjugate and a referenced protein, where the referenced protein is part of referenced glycoconjugete."@en ;
+	rdfs:label "has protein part"@en .
+# 
+# http://purl.jp/bio/12/glyco/conjugate#has_saccharide_part
+
+gco:has_saccharide_part a owl:ObjectProperty ;
+	rdfs:domain gco:Referenced_glycoconjugate ;
+	rdfs:range gco:Referenced_saccharide ;
+	rdfs:comment "\"has saccharide part\" is a relation between a referenced glycoconjugate and a referenced saccharide, where the referenced saccharide is part of referenced glycoconjugete."@en ;
+	rdfs:label "has saccharide part"@en .
 # 
 # http://purl.jp/bio/12/glyco/conjugate#max_relative_abundance
 
@@ -520,6 +537,13 @@ gco:Max_relative_abundance a owl:Class ;
 gco:Min_relative_abundance a owl:Class ;
 	rdfs:comment "Minimum percentage of abundance"@en ;
 	rdfs:label "Min relative abundance"@en .
+# 
+# http://purl.jp/bio/12/glyco/conjugate#Referenced_glycoconjugate
+
+gco:Referenced_glycoconjugate a owl:Class ;
+	rdfs:subClassOf glycan:Referenced_compound ;
+	rdfs:comment "Correlation class, which connects a referenced saccharide, referenced protein and referenced lipd classes."@en ;
+	rdfs:label "Referenced Glycoconjugate"@en .
 # 
 # http://purl.jp/bio/12/glyco/conjugate#Referenced_lipid
 
