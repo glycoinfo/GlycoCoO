@@ -335,45 +335,13 @@ up:commonName a owl:ObjectProperty ;
 	rdfs:isDefinedBy <http://purl.uniprot.org/core/> ;
 	rdfs:label "common name"^^xsd:string .
 # 
-# http://purl.uniprot.org/core/mnemonic
-
-up:mnemonic a owl:ObjectProperty .
-# 
 # http://purl.uniprot.org/core/name
 
 up:name a owl:ObjectProperty .
 # 
-# http://purl.uniprot.org/core/replaces
-
-up:replaces a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000001
-
-sio:SIO_000001 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000008
-
-sio:SIO_000008 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000059
-
-sio:SIO_000059 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000095
-
-sio:SIO_000095 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000212
-
-sio:SIO_000212 a owl:ObjectProperty ;
-	owl:inverseOf sio:SIO_000628 .
-# 
 # http://semanticscience.org/resource/SIO_000221
 
-sio:SIO_000221 a owl:ObjectProperty ;
-	rdfs:subPropertyOf sio:SIO_000008 ;
-	owl:inverseOf sio:SIO_000222 ;
-	a owl:FunctionalProperty ;
+sio:SIO_000221 a owl:ObjectProperty , owl:FunctionalProperty ;
 	rdfs:range sio:SIO_000074 ;
 	dc:identifier "SIO_000221" ;
 	<http://purl.org/dc/terms/description> "has unit is a relation between a quantity and the unit it is a multiple of."@en ;
@@ -381,22 +349,9 @@ sio:SIO_000221 a owl:ObjectProperty ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
 	rdfs:label "has unit"@en .
 # 
-# http://semanticscience.org/resource/SIO_000222
-
-sio:SIO_000222 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000273
-
-sio:SIO_000273 a owl:ObjectProperty .
-# 
-# http://semanticscience.org/resource/SIO_000310
-
-sio:SIO_000310 a owl:ObjectProperty .
-# 
 # http://semanticscience.org/resource/SIO_000313
 
 sio:SIO_000313 a owl:ObjectProperty ;
-	rdfs:subPropertyOf sio:SIO_000310 ;
 	owl:inverseOf sio:SIO_000369 ;
 	rdfs:domain sio:SIO_000289 ;
 	rdfs:range sio:SIO_001258 ;
@@ -409,7 +364,6 @@ sio:SIO_000313 a owl:ObjectProperty ;
 # http://semanticscience.org/resource/SIO_000369
 
 sio:SIO_000369 a owl:ObjectProperty ;
-	rdfs:subPropertyOf sio:SIO_000273 ;
 	dc:identifier "SIO_000369" ;
 	<http://purl.org/dc/terms/description> "has component part is a relation between a whole and a component part where the component is instrinsic to the whole, and loss of the part would change the kind that it is."@en ;
 	sio:example "a human has blood as a component part"@en ;
@@ -419,7 +373,6 @@ sio:SIO_000369 a owl:ObjectProperty ;
 # http://semanticscience.org/resource/SIO_000628
 
 sio:SIO_000628 a owl:ObjectProperty ;
-	rdfs:subPropertyOf sio:SIO_000001 ;
 	dc:identifier "SIO_000628" ;
 	<http://purl.org/dc/terms/description> "refers to is a relation between one entity and the entity that it makes reference to."@en ;
 	sio:subset "core" , "nlp+" ;
@@ -711,10 +664,6 @@ glycan:source_natural a owl:Class .
 
 :glycolipid a owl:Class .
 # 
-# http://purl.obolibrary.org/obo/UO_0000187
-
-<http://purl.obolibrary.org/obo/UO_0000187> a owl:Class .
-# 
 # http://purl.obolibrary.org/obo/UO_0000193
 
 <http://purl.obolibrary.org/obo/UO_0000193> a owl:Class ;
@@ -726,12 +675,6 @@ _:genid27 a owl:Class ;
 _:genid28 a rdf:List ;
 	rdf:first <http://purl.obolibrary.org/obo/UO_0000193> ;
 	rdf:rest rdf:nil .
-
-<http://purl.obolibrary.org/obo/UO_0000193> rdfs:subClassOf <http://purl.obolibrary.org/obo/UO_0000187> , <http://purl.obolibrary.org/obo/UO_1000193> .
-# 
-# http://purl.obolibrary.org/obo/UO_1000193
-
-<http://purl.obolibrary.org/obo/UO_1000193> a owl:Class .
 # 
 # http://purl.uniprot.org/core/Annotation
 
@@ -744,35 +687,23 @@ up:Protein a owl:Class .
 # http://purl.uniprot.org/core/Taxon
 
 up:Taxon a owl:Class ;
-	rdfs:subClassOf owl:Class , _:genid29 .
-
-_:genid29 a owl:Restriction ;
-	owl:onProperty up:replaces ;
-	owl:allValuesFrom up:Taxon .
-
-up:Taxon rdfs:subClassOf _:genid30 .
-
-_:genid30 a owl:Restriction ;
-	owl:onProperty up:mnemonic ;
-	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
-
-up:Taxon rdfs:comment "An element of a taxonomy for classifying life forms."^^xsd:string ;
+	rdfs:comment "An element of a taxonomy for classifying life forms."^^xsd:string ;
 	rdfs:isDefinedBy <http://purl.uniprot.org/core/> ;
 	rdfs:label "Taxon"^^xsd:string ;
 	rdfs:seeAlso <http://www.ncbi.nlm.nih.gov/books/NBK54428/> .
 # 
 # http://semanticscience.org/resource/SIO_000000
 
-sio:SIO_000000 a owl:Class .
-# 
-# http://semanticscience.org/resource/SIO_000052
-
-sio:SIO_000052 a owl:Class .
+sio:SIO_000000 a owl:Class ;
+	dc:identifier "SIO_000000" ;
+	<http://purl.org/dc/terms/description> "Every thing is an entity."@en ;
+	sio:subset "core" ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "entity"@en .
 # 
 # http://semanticscience.org/resource/SIO_000074
 
 sio:SIO_000074 a owl:Class ;
-	rdfs:subClassOf sio:SIO_000052 ;
 	dc:identifier "SIO_000074" ;
 	<http://purl.org/dc/terms/description> "A unit of measurement is a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
@@ -780,22 +711,18 @@ sio:SIO_000074 a owl:Class ;
 # 
 # http://semanticscience.org/resource/SIO_000075
 
-sio:SIO_000075 a owl:Class .
-# 
-# http://semanticscience.org/resource/SIO_000257
-
-sio:SIO_000257 a owl:Class .
+sio:SIO_000075 a owl:Class ;
+	dc:identifier "SIO_000075" ;
+	<http://purl.org/dc/terms/description> "A mathematical entity is an information content entity that are components of a mathematical system or can be defined in mathematical terms."@en ;
+	sio:subset "math+" ;
+	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+	rdfs:label "mathematical entity"@en .
 # 
 # http://semanticscience.org/resource/SIO_000289
 
 sio:SIO_000289 a owl:Class ;
-	rdfs:subClassOf sio:SIO_000075 , _:genid31 .
-
-_:genid31 a owl:Restriction ;
-	owl:onProperty sio:SIO_000059 ;
-	owl:allValuesFrom sio:SIO_000000 .
-
-sio:SIO_000289 dc:identifier "SIO_000289" ;
+	rdfs:subClassOf sio:SIO_000075 ;
+	dc:identifier "SIO_000289" ;
 	<http://purl.org/dc/terms/description> "A set is a collection of entities, for which there may be zero members."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
 	rdfs:label "set"@en .
@@ -803,9 +730,9 @@ sio:SIO_000289 dc:identifier "SIO_000289" ;
 # http://semanticscience.org/resource/SIO_000897
 
 sio:SIO_000897 a owl:Class ;
-	rdfs:subClassOf sio:SIO_000075 , _:genid32 .
+	rdfs:subClassOf sio:SIO_000075 , _:genid29 .
 
-_:genid32 a owl:Restriction ;
+_:genid29 a owl:Restriction ;
 	owl:onProperty sio:SIO_000628 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass sio:SIO_000000 .
@@ -818,7 +745,6 @@ sio:SIO_000897 dc:identifier "SIO_000897" ;
 # http://semanticscience.org/resource/SIO_001018
 
 sio:SIO_001018 a owl:Class ;
-	rdfs:subClassOf sio:SIO_000257 ;
 	dc:identifier "SIO_001018" ;
 	<http://purl.org/dc/terms/description> "A ratio is a relationship between two numbers of the same kind expressed arithmetically as a dimensionless quotient of the two which explicitly indicates how many times the first number contains the second."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
@@ -827,7 +753,6 @@ sio:SIO_001018 a owl:Class ;
 # http://semanticscience.org/resource/SIO_001224
 
 sio:SIO_001224 a owl:Class ;
-	rdfs:subClassOf sio:SIO_010072 ;
 	dc:identifier "SIO_001224" ;
 	<http://purl.org/dc/terms/description> "An amino acid is an organic molecule composed of a carbon bonded to four different groups: a carboxyl group, an amino group, an R group, and a hydrogen atom. In the case of glycine, the R group is another hydrogen atom."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
@@ -836,51 +761,23 @@ sio:SIO_001224 a owl:Class ;
 # http://semanticscience.org/resource/SIO_001258
 
 sio:SIO_001258 a owl:Class ;
-	rdfs:subClassOf sio:SIO_000075 , _:genid33 .
-
-_:genid33 a owl:Restriction ;
-	owl:onProperty sio:SIO_000095 ;
-	owl:someValuesFrom sio:SIO_000289 .
-
-sio:SIO_001258 dc:identifier "SIO_001258" ;
+	rdfs:subClassOf sio:SIO_000075 ;
+	dc:identifier "SIO_001258" ;
 	<http://purl.org/dc/terms/description> "set item is an item in a set."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
 	rdfs:label "set item"@en .
 # 
-# http://semanticscience.org/resource/SIO_010007
-
-sio:SIO_010007 a owl:Class .
-# 
-# http://semanticscience.org/resource/SIO_010072
-
-sio:SIO_010072 a owl:Class .
-# 
 # http://semanticscience.org/resource/SIO_010497
 
 sio:SIO_010497 a owl:Class ;
-	rdfs:subClassOf sio:SIO_010506 , _:genid34 .
-
-_:genid34 a owl:Restriction ;
-	owl:onProperty sio:SIO_000369 ;
-	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-	owl:onClass sio:SIO_010007 .
-
-sio:SIO_010497 dc:identifier "SIO_010497" ;
+	dc:identifier "SIO_010497" ;
 	<http://purl.org/dc/terms/description> "A protein complex is a molecular complex composed of at least two polypeptide chains."@en ;
 	rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
 	rdfs:label "protein complex"@en .
 # 
-# http://semanticscience.org/resource/SIO_010506
-
-sio:SIO_010506 a owl:Class .
-# 
 # http://www.uniprot.org/core/Glycosylation_Annotation
 
 <http://www.uniprot.org/core/Glycosylation_Annotation> a owl:Class .
-# 
-# http://www.w3.org/2002/07/owl#Class
-
-owl:Class a owl:Class .
 # 
 # 
 # 
