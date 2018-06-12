@@ -60,7 +60,7 @@
         a sio:SIO_000289 ; # sio:set
         rdfs:label "saccharides"^^xsd:string ;
         gco:glycosylates_at <Protein/P1/R> ;
-        sio:is-component-part-of <SetItem/1> .
+        sio:SIO_000313 <SetItem/1> . # SIO_000313 is is-component-part-of
 
 <SetItem/1>
         a sio:SIO_001258 ; # sio:set item
