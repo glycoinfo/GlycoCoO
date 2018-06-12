@@ -70,7 +70,7 @@
 
 <Saccharide/S1>
         a glycan:Saccharide ;
-        rdfs:label "saccharide is GTC"^^xsd:string ;
+        rdfs:label "saccharide is GTC acc#"^^xsd:string ;
         rdfs:seeAlso <http://identifiers.org/glytoucan/{GlyTouCan_id}> ;
         foaf:primaryTopic <GlyTouCan/G1> .
 
