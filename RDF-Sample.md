@@ -16,7 +16,7 @@
 
 <Glycoconjugate>
         a gco:Referenced_glycoconjugate ;
-        rdfs:label "a glycoconjugate"^^xsd:string ;
+        rdfs:label "referenced glycoconjugate"^^xsd:string ;
         gco:has_protein_part <Protein> ;
         gco:has_saccharide_part <Saccharide> ;
         glycan:published_in <Citation> ;
@@ -24,7 +24,7 @@
         
 <Protein>
         a gco:Referenced_protein ;
-        rdfs:label "a protein"^^xsd:string ;
+        rdfs:label "referenced protein"^^xsd:string ;
         gco:has_attached_referenced_saccharide <Saccharide> ;
         gco:has_protein <Protein/P1> ;
         gco:has_saccharide_set <Set> .
@@ -53,6 +53,7 @@
 
 <Saccharide>
         a glycan:Referenced_saccharide ;
+        rdfs:label "referenced saccharide"^^xsd:string ;
         gco:glycosylates_at <Protein/P1/R> ;
         glycan:has_glycan <Saccharide/S1> .
 
@@ -69,11 +70,13 @@
 
 <Saccharide/S1>
         a glycan:Saccharide ;
+        rdfs:label "saccharide is GTC"^^xsd:string ;
         rdfs:seeAlso <http://identifiers.org/glytoucan/{GlyTouCan_id}> ;
         foaf:primaryTopic <GlyTouCan/G1> .
 
 <SetItem/1>
         a gco:Relative_abundance ;
+        rdfs:label "relative abundance ratio is 50.0%"^^xsd:string ;
         sio:SIO_000300 "50.0"^^xsd:decimal ; # sio:SIO_000300 is sio:has-value
         sio:SIO_000221 UO:0000193 . # sio:SIO_000221 is sio:has-unit; UO:0000193 is UO:purity percentage     
 ```
