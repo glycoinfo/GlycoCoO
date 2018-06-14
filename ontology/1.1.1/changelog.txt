@@ -1,0 +1,5 @@
+2018-06-14
+author: Daisuke Shinmachi
+
+## Add
+added labels for each classes and properites.
