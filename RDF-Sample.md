@@ -41,13 +41,13 @@
 
 <Protein/P1/R/EP>
         a faldo:ExactPosition ;
-        rdfs:label "82"^^xsd:string ;
+        rdfs:label "Glycosylation Site: 82"^^xsd:string ;
         glycan:has_amino_acid <Protein/P1/R/EP/AA> ;
         faldo:position "82"^^xsd:int .
 
 <Protein/P1/R/EP/AA>
         a glycan:glycosylated_AA ;
-        rdfs:label "amino acid of the glycosylation site"^^xsd:string ;
+        rdfs:label "amino acid residue of the glycosylation site"^^xsd:string ;
         rdfs:label "N"^^xsd:string ;
         skos:prefLabel "Asn"^^xsd:string .
 
