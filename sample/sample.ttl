@@ -3,6 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
@@ -12,6 +13,7 @@
 @prefix UO: <http://purl.obolibrary.org/obo/uo#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix gco: <http://purl.jp/bio/12/glyco/conjugate#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 
 <Referenced_Glycoprotein uri>
         a gco:Referenced_glycoprotein ;
