@@ -13,67 +13,91 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix gco: <http://purl.jp/bio/12/glyco/conjugate#> .
 
-<Glycoconjugate>
-        a gco:Referenced_glycoconjugate ;
-        rdfs:label "referenced glycoconjugate"^^xsd:string ;
-        gco:has_protein_part <Protein> ;
-        gco:has_saccharide_part <Saccharide> ;
-        glycan:published_in <Citation> ;
-        glycan:has_association <Compound Disease Association> .
-        
-<Protein>
+<Referenced_Glycoprotein uri>
+        a gco:Referenced_glycoprotein ;
+        rdfs:label "referenced glycoprotein"^^xsd:string ;
+        gco:has_protein_part <Referenced_Protein uri> ;
+        gco:has_saccharide_part <Referenced_Saccharide uri> ;
+        glycan:published_in <http://rdf.ncbi.nlm.nih.gov/pubmed/{PMID}> ;
+        dcterms:references <http://rdf.ncbi.nlm.nih.gov/pubmed/{PMID}> ;
+        glycan:has_association <Compound Disease Association uri> ;
+        glycan:is_from_source <source uri> .
+
+<source uri>
+        a glycan:Source_natural ;
+        glycan:has_tissue <tissue uri> ;
+        glycan:has_cell_line <cell line uri> ;
+        glycan:has_taxon <http://identifiers.org/taxonomy/{taxonomy id}> .
+
+<Compound Disease Association uri>
+        a codao:CompoundDiseaseAssociation ;
+        sio:SIO_000628 <Disease uri> . # SIO_000628 is refers to
+
+<Disease uri>
+        a obo:DOID_xxxx ;
+        rdfs:label "disease name" ;
+        skos:notation "DOID:xxxx" .
+
+<Referenced_Protein uri>
         a gco:Referenced_protein ;
         rdfs:label "referenced protein"^^xsd:string ;
-        gco:has_attached_referenced_saccharide <Saccharide> ;
-        gco:has_protein <Protein/P1> ;
-        gco:has_saccharide_set <Set> .
+        gco:has_attached_referenced_saccharide <Referenced_Saccharide uri> ;
+        gco:has_protein <Protein uri> ;
+        gco:glycosylated_at <Protein/site uri> ;
+        gco:has_saccharide_set <Set uri> .
 
-<Protein/P1>
+<Protein uri>
         a glycan:Glycoprotein ;
         rdfs:label "a glycocoprotein"^^xsd:string ;
-        rdfs:seeAlso <http://identifiers.org/uniprot/{uniprot_id}> ;
-        gco:glycosylated_at <Protein/P1/R> .
+        rdfs:seeAlso <http://identifiers.org/uniprot/{uniprot_id}> .
         
-<Protein/P1/R>
-        a faldo:Region ;
-        faldo:location <Protein/P1/R/EP> .
+<Protein/site uri>
+        a glycan:Glycosylation_site ;
+        faldo:location <Protein/site/EP uri> ;
+        gco:has_saccharide_set <set uri> ;
+        gco:has_saccharide <Referenced_Saccharide uri> .
 
-<Protein/P1/R/EP>
+<Protein/site/EP uri>
         a faldo:ExactPosition ;
         rdfs:label "Glycosylation Site: 82"^^xsd:string ;
-        glycan:has_amino_acid <Protein/P1/R/EP/AA> ;
+        glycan:has_amino_acid <Protein/site/EP/AA uri> ;
         faldo:position "82"^^xsd:int .
 
-<Protein/P1/R/EP/AA>
+<Protein/site/EP/AA uri>
         a glycan:glycosylated_AA ;
         rdfs:label "amino acid residue of the glycosylation site"^^xsd:string ;
         rdfs:label "N"^^xsd:string ;
         skos:prefLabel "Asn"^^xsd:string .
 
-<Saccharide>
+<Referenced_Saccharide uri>
         a glycan:Referenced_saccharide ;
         rdfs:label "referenced saccharide"^^xsd:string ;
-        gco:glycosylates_at <Protein/P1/R> ;
-        glycan:has_glycan <Saccharide/S1> .
+        gco:glycosylates_at <Protein/site uri> ;
+        glycan:has_glycan <Saccharide uri> .
 
-<Set>
+<Set uri>
         a sio:SIO_000289 ; # sio:set
         rdfs:label "saccharides"^^xsd:string ;
-        gco:glycosylates_at <Protein/P1/R> ;
-        sio:SIO_000313 <SetItem/1> . # SIO_000313 is is-component-part-of
+        gco:glycosylates_at <Protein/site uri> ;
+        sio:SIO_000313 <SetItem uri> . # SIO_000313 is is-component-part-of
 
-<SetItem/1>
+<SetItem uri>
         a sio:SIO_001258 ; # sio:set item
         rdfs:label "saccharide"^^xsd:string ;
-        owl:sameAs <Saccharide/S1> .
+        owl:sameAs <Saccharide uri> ;
+        foaf:primaryTopic <http://glytoucan.org/Structures/Glycans/{GlyTouCan_id}> ;
+        gco:relative_abundance_percentage <Relative_Abundance uri> .
 
-<Saccharide/S1>
+<Saccharide uri>
         a glycan:Saccharide ;
         rdfs:label "saccharide is GTC acc#"^^xsd:string ;
-        rdfs:seeAlso <http://identifiers.org/glytoucan/{GlyTouCan_id}> ;
-        foaf:primaryTopic <GlyTouCan/G1> .
+        foaf:primaryTopic <http://glytoucan.org/Structures/Glycans/{GlyTouCan_id}> .
 
-<SetItem/1>
+<http://glytoucan.org/Structures/Glycans/{GlyTouCan_id}>
+        rdfs:seeAlso <http://identifiers.org/glytoucan/{GlyTouCan_id}> .
+
+
+<Relative_Abundance uri>
         a gco:Relative_abundance ;
         rdfs:label "relative abundance ratio is 50.0%"^^xsd:string ;
         sio:SIO_000300 "50.0"^^xsd:decimal ; # sio:SIO_000300 is sio:has-value
