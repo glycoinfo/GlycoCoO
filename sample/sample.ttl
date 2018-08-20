@@ -1,4 +1,4 @@
-# Sample RDF (ttl) 
+# Sample RDF (ttl)
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -52,7 +52,7 @@
         a glycan:Glycoprotein ;
         rdfs:label "a glycocoprotein"^^xsd:string ;
         rdfs:seeAlso <http://identifiers.org/uniprot/{uniprot_id}> .
-        
+
 <Protein/site uri>
         a glycan:Glycosylation_site ;
         faldo:location <Protein/site/EP uri> ;
@@ -66,7 +66,7 @@
         faldo:position "82"^^xsd:int .
 
 <Protein/site/EP/AA uri>
-        a glycan:glycosylated_AA ;
+        a glycan:Glycosylated_AA ;
         rdfs:label "amino acid residue of the glycosylation site"^^xsd:string ;
         rdfs:label "N"^^xsd:string ;
         skos:prefLabel "Asn"^^xsd:string .

@@ -1,5 +1,5 @@
 ```
-# Sample RDF (ttl) 
+# Sample RDF (ttl)
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -21,7 +21,7 @@
         gco:has_saccharide_part <Saccharide> ;
         glycan:published_in <Citation> ;
         glycan:has_association <Compound Disease Association> .
-        
+
 <Protein>
         a gco:Referenced_protein ;
         rdfs:label "referenced protein"^^xsd:string ;
@@ -34,7 +34,7 @@
         rdfs:label "a glycocoprotein"^^xsd:string ;
         rdfs:seeAlso <http://identifiers.org/uniprot/{uniprot_id}> ;
         gco:glycosylated_at <Protein/P1/R> .
-        
+
 <Protein/P1/R>
         a faldo:Region ;
         faldo:location <Protein/P1/R/EP> .
@@ -46,7 +46,7 @@
         faldo:position "82"^^xsd:int .
 
 <Protein/P1/R/EP/AA>
-        a glycan:glycosylated_AA ;
+        a glycan:Glycosylated_AA ;
         rdfs:label "amino acid residue of the glycosylation site"^^xsd:string ;
         rdfs:label "N"^^xsd:string ;
         skos:prefLabel "Asn"^^xsd:string .
