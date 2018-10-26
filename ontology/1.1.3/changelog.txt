@@ -1,0 +1,7 @@
+2018-10-26
+author: Daisuke Shinmachi
+
+## fix typo
+Glycosylation_Annotation URI
+http://www.uniprot.org/core/Glycosylation_Annotation
+=> http://purl.uniprot.org/core/Glycosylation_Annotation
