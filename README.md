@@ -33,5 +33,5 @@ An overview of all database providers generated GlycoCoO file is available in th
 * UniCarbKB: any derivatives must link back to UniCarbKB (data provenance) and cite <a href="https://www.ncbi.nlm.nih.gov/pubmed/24234447">Campbell MP et al., UniCarbKB: building a knowledge platform for glycoproteomics,Nucleic Acids Res. 2014 Jan;42(Database issue):D215-21.</a>. This includes use of the UniCarbKB stylesheet described in the header. 
 
 ## Funding
-* UniCarbKB recongises funding support from NeCTAR (ARDC) and NIG Glycosciences Common Fund project GlyGen
+* UniCarbKB recongises funding support from NeCTAR (ARDC) and NIH Glycosciences Common Fund project GlyGen
 
