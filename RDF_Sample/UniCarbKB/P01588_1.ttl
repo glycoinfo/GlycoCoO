@@ -1,0 +1,516 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ms:    <http://www.berkeleybop.org/ontologies/ms.owl> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix gco:   <http://purl.jp/bio/12/glyco/conjugate#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uk:    <http://purl.org/unicarbkb/> .
+@prefix faldo: <http://www.biohackathon.org/resource/faldo/> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix pato:  <http://purl.obolibrary.org/obo/uo.owl> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bibo:  <http://purl.org/ontology/bibo/> .
+@prefix unicorn: <http://purl.jp/bio/12/glyco/unicorn/> .
+@prefix uniprot: <http://purl.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix gmd:   <http://purl.jp/bio/12/glyco/glycomethod#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_4>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "4" ;
+        dcterms:identifier       "4" .
+
+<http://rdf.unicarbkb.org/P01588Region8>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_439159207> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_439159207> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet8> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_143710349>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_143710349> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_4>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_4> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet7>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_8069> .
+
+<http://rdf.unicarbkb.org/P01588Region2>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_599121950> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_599121950> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet2> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionSer153> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet1>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_816740094> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_25>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "25" ;
+        dcterms:identifier       "25" .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound379accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/25> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_439159207>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_439159207> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound376accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/439159207> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound373accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/522699020> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_25>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_25> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_439159207>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "439159207" ;
+        dcterms:identifier       "439159207" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_25>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_25> .
+
+<http://rdf.unicarbkb.org/P01588Region11>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_25> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_25> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet11> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionSer153> .
+
+<http://rdf.unicarbkb.org/P01588Region7>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8069> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8069> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet7> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/taxonomy/245411>
+        a                       <http://purl.uniprot.org/core/Taxon> ;
+        rdfs:subClassOf         <http://purl.uniprot.org/taxonomy/245411> ;
+        uniprot:scientificName  "homo sapiens" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8069>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_8069> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet6>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_988076971> .
+
+<http://rdf.unicarbkb.org/author/Altmann_F>
+        a          dc:contributor ;
+        foaf:name  "Altmann_F" .
+
+<http://rdf.unicarbkb.org/source/210>
+        a                 glycan:Source_natural ;
+        glycan:has_taxon  <http://rdf.unicarbkb.org/taxonomy/245411> .
+
+<asparagine>  a  glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/author/Packer_NH.>
+        a          dc:contributor ;
+        foaf:name  "Packer_NH." .
+
+<http://rdf.unicarbkb.org/P01588Region1>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_816740094> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_816740094> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet1> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionSer153> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_599121950>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_599121950> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_731>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_731> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound383accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/599121950> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_500995277>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_500995277> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound380accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/4> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencedprotein/P01588>
+        a                       gco:Referenced_protein ;
+        gco:glycosylated_at     <http://rdf.unicarbkb.org/P01588Region10> , <http://rdf.unicarbkb.org/P01588Region12> , <http://rdf.unicarbkb.org/P01588Region2> , <http://rdf.unicarbkb.org/P01588Region7> , <http://rdf.unicarbkb.org/P01588Region9> , <http://rdf.unicarbkb.org/P01588Region1> , <http://rdf.unicarbkb.org/P01588Region4> , <http://rdf.unicarbkb.org/P01588Region6> , <http://rdf.unicarbkb.org/P01588Region11> , <http://rdf.unicarbkb.org/P01588Region3> , <http://rdf.unicarbkb.org/P01588Region8> , <http://rdf.unicarbkb.org/P01588Region5> ;
+        gco:has_protein         <http://purl.uniprot.org/uniprot/P01588> ;
+        gco:has_saccharide_set  <http://rdf.unicarbkb.org/griffithP01588SaccSet12> , <http://rdf.unicarbkb.org/griffithP01588SaccSet9> , <http://rdf.unicarbkb.org/griffithP01588SaccSet6> , <http://rdf.unicarbkb.org/griffithP01588SaccSet3> , <http://rdf.unicarbkb.org/griffithP01588SaccSet10> , <http://rdf.unicarbkb.org/griffithP01588SaccSet1> , <http://rdf.unicarbkb.org/griffithP01588SaccSet7> , <http://rdf.unicarbkb.org/griffithP01588SaccSet4> , <http://rdf.unicarbkb.org/griffithP01588SaccSet11> , <http://rdf.unicarbkb.org/griffithP01588SaccSet8> , <http://rdf.unicarbkb.org/griffithP01588SaccSet5> , <http://rdf.unicarbkb.org/griffithP01588SaccSet2> ;
+        glycan:has_glycan       <http://rdf.unicarbkb.org/structure/uc_g_439159207> , <http://rdf.unicarbkb.org/structure/uc_g_500995277> , <http://rdf.unicarbkb.org/structure/uc_g_8069> , <http://rdf.unicarbkb.org/structure/uc_g_25> , <http://rdf.unicarbkb.org/structure/uc_g_143710349> , <http://rdf.unicarbkb.org/structure/uc_g_4> , <http://rdf.unicarbkb.org/structure/uc_g_988076971> , <http://rdf.unicarbkb.org/structure/uc_g_522699020> , <http://rdf.unicarbkb.org/structure/uc_g_731> , <http://rdf.unicarbkb.org/structure/uc_g_816740094> , <http://rdf.unicarbkb.org/structure/uc_g_599121950> , <http://rdf.unicarbkb.org/structure/uc_g_851038585> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet12>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_4> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_143710349>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_143710349> .
+
+<http://rdf.unicarbkb.org/amino_acid_ser>
+        a               glycan:amino_acid ;
+        glycan:amino_acid  "Ser" .
+
+<http://rdf.unicarbkb.org/P01588Region10>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_731> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_731> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet10> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionSer153> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_8069>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_8069> .
+
+<http://rdf.unicarbkb.org/amino_acid_asn>
+        a               glycan:amino_acid ;
+        glycan:amino_acid  "Asn" .
+
+<http://rdf.unicarbkb.org/structure/uc_g_143710349>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "143710349" ;
+        dcterms:identifier       "143710349" .
+
+<http://rdf.unicarbkb.org/P01588Region6>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_988076971> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_988076971> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet6> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound372accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/143710349> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet5>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_851038585> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_522699020>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_522699020> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_851038585>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_851038585> .
+
+<http://rdf.unicarbkb.org/author/Jensen_PH>
+        a          dc:contributor ;
+        foaf:name  "Jensen_PH" .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet11>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_25> .
+
+<http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos>
+        faldo:position  "110^^xsd:int" .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound382accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/816740094> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/P01588Region5>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_851038585> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_851038585> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet5> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/P01588ExactPositionSer153pos>
+        faldo:position  "153^^xsd:int" .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet4>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_522699020> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_599121950>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_599121950> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_500995277>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_500995277> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound378accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/500995277> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound375accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/988076971> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<threonine>  a  glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/structure/uc_g_500995277>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "500995277" ;
+        dcterms:identifier       "500995277" .
+
+<serine>  a     glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_816740094>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_816740094> .
+
+<http://rdf.unicarbkb.org/reference/22678432>
+        a                 bibo:Article ;
+        glycan:has_pmid   "22678432" ;
+        dc:creator        "Kolarich D1, Jensen PH, Altmann F, Packer NH." ;
+        dc:title          "Determination of site-specific glycan heterogeneity on glycoproteins" ;
+        dcterms:isPartOf  <http://rdf.unicarbkb.org/journal/235> ;
+        dcterms:issued    "2012" ;
+        bibo:authorList   <http://rdf.unicarbkb.org/author/Altmann_F> , <http://rdf.unicarbkb.org/author/Kolarich_D1> , <http://rdf.unicarbkb.org/author/Packer_NH.> , <http://rdf.unicarbkb.org/author/Jensen_PH> ;
+        bibo:pageEnd      "98" ;
+        bibo:pageStart    "1285" ;
+        bibo:volume       "7(7)" ;
+        owl:sameAs        <http://www.ncbi.nlm.nih.gov/pubmed/22678432> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_988076971>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_988076971> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet10>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_731> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet9>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_500995277> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_731>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "731" ;
+        dcterms:identifier       "731" .
+
+<http://rdf.unicarbkb.org/P01588Region4>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_522699020> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_522699020> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet4> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet3>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_143710349> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_8069>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "8069" ;
+        dcterms:identifier       "8069" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_522699020>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_522699020> .
+
+<http://rdf.unicarbkb.org/P01588ExactPositionSer153>
+        a                    faldo:ExactPosition ;
+        gco:has_amino_acid   <http://rdf.unicarbkb.org/amino_acid_ser> ;
+        faldo:ExactPosition  <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        faldo:position       "153^^xsd:int" .
+
+<http://rdf.unicarbkb.org/structure/uc_g_522699020>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "522699020" ;
+        dcterms:identifier       "522699020" .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound381accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/731> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_439159207>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_439159207> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_851038585>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_851038585> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_851038585>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "851038585" ;
+        dcterms:identifier       "851038585" .
+
+<http://rdf.unicarbkb.org/P01588Region9>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_500995277> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_500995277> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet9> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet8>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_439159207> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_599121950>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "599121950" ;
+        dcterms:identifier       "599121950" .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound377accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/8069> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound374accP01588>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P01588> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/851038585> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/22678432> .
+
+<http://rdf.unicarbkb.org/P01588Region3>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_143710349> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_143710349> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet3> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionAsn110> .
+
+<http://rdf.unicarbkb.org/griffithP01588SaccSet2>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P01588ExactPositionSer153pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_599121950> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_4> .
+
+<http://rdf.unicarbkb.org/journal/235>
+        a                bibo:Journal ;
+        dc:title         "Nat Protoc" ;
+        bibo:shortTitle  "Nat Protoc" .
+
+<http://rdf.unicarbkb.org/P01588ExactPositionAsn110>
+        a                    faldo:ExactPosition ;
+        gco:has_amino_acid   <http://rdf.unicarbkb.org/amino_acid_asn> ;
+        faldo:ExactPosition  <http://rdf.unicarbkb.org/P01588ExactPositionAsn110pos> ;
+        faldo:position       "110^^xsd:int" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_731>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_731> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_816740094>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_816740094> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_988076971>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_988076971> .
+
+<http://rdf.unicarbkb.org/author/Kolarich_D1>
+        a          dc:contributor ;
+        foaf:name  "Kolarich_D1" .
+
+<http://rdf.unicarbkb.org/structure/uc_g_816740094>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "816740094" ;
+        dcterms:identifier       "816740094" .
+
+<http://purl.uniprot.org/uniprot/P01588>
+        a                        gco:Glycoprotein , gco:Protein ;
+        rdfs:label               "add name description here" ;
+        rdfs:seeAlso             <http://identifiers.org/uniprot/P01588> ;
+        glycan:amino_acid_length    "1" ;
+        glycan:amino_acid_sequence  "xyz" ;
+        dcterms:identifier       "P01588" .
+
+<http://rdf.unicarbkb.org/P01588Region12>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP01588SaccSet12> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P01588ExactPositionSer153> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_988076971>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "988076971" ;
+        dcterms:identifier       "988076971" .

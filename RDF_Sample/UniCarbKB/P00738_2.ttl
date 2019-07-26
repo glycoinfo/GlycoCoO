@@ -1,0 +1,934 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ms:    <http://www.berkeleybop.org/ontologies/ms.owl> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix gco:   <http://purl.jp/bio/12/glyco/conjugate#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uk:    <http://purl.org/unicarbkb/> .
+@prefix faldo: <http://www.biohackathon.org/resource/faldo/> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix pato:  <http://purl.obolibrary.org/obo/uo.owl> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bibo:  <http://purl.org/ontology/bibo/> .
+@prefix unicorn: <http://purl.jp/bio/12/glyco/unicorn/> .
+@prefix uniprot: <http://purl.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix gmd:   <http://purl.jp/bio/12/glyco/glycomethod#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7529>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7529> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc4NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "4"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7784/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7717/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7626/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|12\nSubtreeLinkageID1:u(-1+2)u\nRES\n14b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n15s:n-acetyl\nLIN\n13:14d(5+1)15n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|12\nSubtreeLinkageID1:u(-1+1)u\nRES\n16b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7630>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7630> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7630/ct> , <http://rdf.unicarbkb.org/structure/7630/gwb> ;
+        glycan:has_mass           "2151.782276729" ;
+        glycan:has_unicarbkb_id   "7630" ;
+        dcterms:identifier        "7630" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7708>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7708> .
+
+<http://rdf.unicarbkb.org/structure/7636/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7585>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7585> .
+
+<http://rdf.unicarbkb.org/structure/7820/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7630/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7708/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}((--??2D-NeuAc,p)--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7879>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7879> .
+
+<http://rdf.unicarbkb.org/structure/7723/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n22b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n23s:n-acetyl\nLIN\n20:22d(5+1)23n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n24b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7620/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7624>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7624> .
+
+<http://rdf.unicarbkb.org/structure/7717>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7717> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7717/ct> , <http://rdf.unicarbkb.org/structure/7717/gwb> ;
+        glycan:has_mass           "2370.8565638819996" ;
+        glycan:has_unicarbkb_id   "7717" ;
+        dcterms:identifier        "7717" .
+
+<http://rdf.unicarbkb.org/structure/7688>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7688> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc3NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7688/ct> , <http://rdf.unicarbkb.org/structure/7688/gwb> ;
+        glycan:has_mass           "3390.2007222649995" ;
+        glycan:has_unicarbkb_id   "7688" ;
+        dcterms:identifier        "7688" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7630>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7630> .
+
+<http://rdf.unicarbkb.org/structure/7799/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n22b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc1NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "1"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7782/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7752/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7636/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|12\nSubtreeLinkageID1:u(-1+1)u\nRES\n14b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7867>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7867> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc3NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7867/ct> , <http://rdf.unicarbkb.org/structure/7867/gwb> ;
+        glycan:has_mass           "2879.0106174959997" ;
+        glycan:has_unicarbkb_id   "7867" ;
+        dcterms:identifier        "7867" .
+
+<http://rdf.unicarbkb.org/structure/7648/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|12\nSubtreeLinkageID1:u(-1+1)u\nRES\n14b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7732>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7732> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7717>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7717> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7782>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7782> .
+
+<http://rdf.unicarbkb.org/structure/7867/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}((--??2D-NeuAc,p)--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7688>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7688> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7740>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7740> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc1NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "1"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7620>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7620> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7620/ct> , <http://rdf.unicarbkb.org/structure/7620/gwb> ;
+        glycan:has_mass           "1640.5921719599999" ;
+        glycan:has_unicarbkb_id   "7620" ;
+        dcterms:identifier        "7620" .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc3NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc4NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "4"^^xsd:int .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7648>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7648> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7867>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7867> .
+
+<http://rdf.unicarbkb.org/structure/7820>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7820> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc1NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7820/ct> , <http://rdf.unicarbkb.org/structure/7820/gwb> ;
+        glycan:has_mass           "1931.6875884849999" ;
+        glycan:has_unicarbkb_id   "7820" ;
+        dcterms:identifier        "7820" .
+
+<http://rdf.unicarbkb.org/structure/7431/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<serine>  a     glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/structure/7557>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7557> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7557/ct> , <http://rdf.unicarbkb.org/structure/7557/gwb> ;
+        glycan:has_mass           "2368.840913818" ;
+        glycan:has_unicarbkb_id   "7557" ;
+        dcterms:identifier        "7557" .
+
+<http://rdf.unicarbkb.org/structure/7688/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n22b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n23s:n-acetyl\nLIN\n20:22d(5+1)23n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n24b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n25s:n-acetyl\nLIN\n21:24d(5+1)25n\nUND4:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n26b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7799/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}(--??2D-NeuAc,p)--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7585/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7585>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7585> .
+
+<http://rdf.unicarbkb.org/structure/7723/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}((--??2D-NeuAc,p)--??1L-Fuc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7597/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n22b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n23s:n-acetyl\nLIN\n20:22d(5+1)23n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7636>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7636> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7636/ct> , <http://rdf.unicarbkb.org/structure/7636/gwb> ;
+        glycan:has_mass           "1786.650080768" ;
+        glycan:has_unicarbkb_id   "7636" ;
+        dcterms:identifier        "7636" .
+
+<http://rdf.unicarbkb.org/structure/7867/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n17b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n18s:n-acetyl\nLIN\n16:17d(5+1)18n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n19b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n20s:n-acetyl\nLIN\n17:19d(5+1)20n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n21b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n22s:n-acetyl\nLIN\n18:21d(5+1)22n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7620>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7620> .
+
+<http://rdf.unicarbkb.org/structure/7799>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7799> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc1NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7799/ct> , <http://rdf.unicarbkb.org/structure/7799/gwb> ;
+        glycan:has_mass           "2808.0098892149995" ;
+        glycan:has_unicarbkb_id   "7799" ;
+        dcterms:identifier        "7799" .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/amino_acid_asn>
+        a               glycan:amino_acid ;
+        glycan:amino_acid  "Asn" .
+
+<threonine>  a  glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/structure/7523>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7523> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7523/ct> , <http://rdf.unicarbkb.org/structure/7523/gwb> ;
+        glycan:has_mass           "2222.78300501" ;
+        glycan:has_unicarbkb_id   "7523" ;
+        dcterms:identifier        "7523" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7820>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7820> .
+
+<http://rdf.unicarbkb.org/structure/7648/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7431>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7431> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7431/ct> , <http://rdf.unicarbkb.org/structure/7431/gwb> ;
+        glycan:has_mass           "2516.9144726899995" ;
+        glycan:has_unicarbkb_id   "7431" ;
+        dcterms:identifier        "7431" .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc1NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "1"^^xsd:int .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7557>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7557> .
+
+<http://rdf.unicarbkb.org/structure/7723>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7723> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7723/ct> , <http://rdf.unicarbkb.org/structure/7723/gwb> ;
+        glycan:has_mass           "3099.1053057399995" ;
+        glycan:has_unicarbkb_id   "7723" ;
+        dcterms:identifier        "7723" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7630>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7630> .
+
+<http://rdf.unicarbkb.org/structure/7688/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}(((--??2D-NeuAc,p)--??2D-NeuAc,p)--??1L-Fuc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7468/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}(((--??1L-Fuc,p)--??2D-NeuAc,p)--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7636>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7636> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7717/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7782/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n20b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7802>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7802> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7802/ct> , <http://rdf.unicarbkb.org/structure/7802/gwb> ;
+        glycan:has_mass           "2005.7243679209998" ;
+        glycan:has_unicarbkb_id   "7802" ;
+        dcterms:identifier        "7802" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7799>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7799> .
+
+<http://rdf.unicarbkb.org/structure/7752/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n10s:n-acetyl\n11s:n-acetyl\n12b:x-dglc-HEX-1:5\n13b:x-dgal-HEX-1:5\n14b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n15s:n-acetyl\n16s:n-acetyl\n17b:a-dman-HEX-1:5\n18b:x-dglc-HEX-1:5\n19b:x-dgal-HEX-1:5\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\n22s:n-acetyl\n23b:x-dglc-HEX-1:5\n24b:x-dgal-HEX-1:5\n25b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n26s:n-acetyl\n27s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:8o(-1+2)9d\n9:9d(5+1)10n\n10:7d(2+1)11n\n11:6o(-1+1)12d\n12:12o(-1+1)13d\n13:13o(-1+2)14d\n14:14d(5+1)15n\n15:12d(2+1)16n\n16:5o(6+1)17d\n17:17o(-1+1)18d\n18:18o(-1+1)19d\n19:19o(-1+2)20d\n20:20d(5+1)21n\n21:18d(2+1)22n\n22:17o(-1+1)23d\n23:23o(-1+1)24d\n24:24o(-1+2)25d\n25:25d(5+1)26n\n26:23d(2+1)27n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|9|12|13|14|17|18|19|20|23|24|25\nSubtreeLinkageID1:u(-1+1)u\nRES\n28b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7752>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7752> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc4NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7752/ct> , <http://rdf.unicarbkb.org/structure/7752/gwb> ;
+        glycan:has_mass           "3681.29613879" ;
+        glycan:has_unicarbkb_id   "7752" ;
+        dcterms:identifier        "7752" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7523>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7523> .
+
+<http://rdf.unicarbkb.org/structure/7831>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7831> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7831/ct> , <http://rdf.unicarbkb.org/structure/7831/gwb> ;
+        glycan:has_mass           "2587.9152009709996" ;
+        glycan:has_unicarbkb_id   "7831" ;
+        dcterms:identifier        "7831" .
+
+<http://rdf.unicarbkb.org/structure/7468>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7468> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc3NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7468/ct> , <http://rdf.unicarbkb.org/structure/7468/gwb> ;
+        glycan:has_mass           "3390.2007222649995" ;
+        glycan:has_unicarbkb_id   "7468" ;
+        dcterms:identifier        "7468" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7717>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7717> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7431>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7431> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7688>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7688> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7723>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7723> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc3NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/P00738GF1>
+        a                    gco:Glycoform ;
+        gco:glycosylates_at  <http://rdf.unicarbkb.org/P00738ExactPositionASN241pos> ;
+        gco:has_saccharide   <http://rdf.unicarbkb.org/referencedsaccharide/7879> , <http://rdf.unicarbkb.org/referencedsaccharide/7584> , <http://rdf.unicarbkb.org/referencedsaccharide/7820> , <http://rdf.unicarbkb.org/referencedsaccharide/7585> , <http://rdf.unicarbkb.org/referencedsaccharide/7802> , <http://rdf.unicarbkb.org/referencedsaccharide/7597> , <http://rdf.unicarbkb.org/referencedsaccharide/7867> , <http://rdf.unicarbkb.org/referencedsaccharide/7626> , <http://rdf.unicarbkb.org/referencedsaccharide/7431> , <http://rdf.unicarbkb.org/referencedsaccharide/7624> , <http://rdf.unicarbkb.org/referencedsaccharide/7723> , <http://rdf.unicarbkb.org/referencedsaccharide/7732> , <http://rdf.unicarbkb.org/referencedsaccharide/7717> , <http://rdf.unicarbkb.org/referencedsaccharide/7529> , <http://rdf.unicarbkb.org/referencedsaccharide/7752> , <http://rdf.unicarbkb.org/referencedsaccharide/7688> , <http://rdf.unicarbkb.org/referencedsaccharide/7468> , <http://rdf.unicarbkb.org/referencedsaccharide/7648> , <http://rdf.unicarbkb.org/referencedsaccharide/7740> , <http://rdf.unicarbkb.org/referencedsaccharide/7620> , <http://rdf.unicarbkb.org/referencedsaccharide/7784> , <http://rdf.unicarbkb.org/referencedsaccharide/7708> , <http://rdf.unicarbkb.org/referencedsaccharide/7636> , <http://rdf.unicarbkb.org/referencedsaccharide/7782> , <http://rdf.unicarbkb.org/referencedsaccharide/7523> , <http://rdf.unicarbkb.org/referencedsaccharide/7630> , <http://rdf.unicarbkb.org/referencedsaccharide/7557> , <http://rdf.unicarbkb.org/referencedsaccharide/7799> , <http://rdf.unicarbkb.org/referencedsaccharide/7831> .
+
+<http://rdf.unicarbkb.org/structure/7626>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7626> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc1NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7626/ct> , <http://rdf.unicarbkb.org/structure/7626/gwb> ;
+        glycan:has_mass           "2077.745497293" ;
+        glycan:has_unicarbkb_id   "7626" ;
+        dcterms:identifier        "7626" .
+
+<http://rdf.unicarbkb.org/structure/7557/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7802>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7802> .
+
+<http://rdf.unicarbkb.org/structure/7708/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n22b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n23s:n-acetyl\nLIN\n20:22d(5+1)23n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n24b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n25s:n-acetyl\nLIN\n21:24d(5+1)25n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7867>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7867> .
+
+<http://rdf.unicarbkb.org/structure/7584/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7597>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7597> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7597/ct> , <http://rdf.unicarbkb.org/structure/7597/gwb> ;
+        glycan:has_mass           "2953.0473969319996" ;
+        glycan:has_unicarbkb_id   "7597" ;
+        dcterms:identifier        "7597" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7752>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7752> .
+
+<http://rdf.unicarbkb.org/structure/7879/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}((--??1L-Fuc,p)--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7597/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p}(--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7831>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7831> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7468>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7468> .
+
+<http://rdf.unicarbkb.org/structure/7626/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}(--??1L-Fuc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7584>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7584> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7584/ct> , <http://rdf.unicarbkb.org/structure/7584/gwb> ;
+        glycan:has_mass           "1640.5921719599999" ;
+        glycan:has_unicarbkb_id   "7584" ;
+        dcterms:identifier        "7584" .
+
+<http://rdf.unicarbkb.org/structure/7523/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n10s:n-acetyl\n11s:n-acetyl\n12b:a-dman-HEX-1:5\n13b:x-dglc-HEX-1:5\n14b:x-dgal-HEX-1:5\n15b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n16s:n-acetyl\n17s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:8o(-1+2)9d\n9:9d(5+1)10n\n10:7d(2+1)11n\n11:5o(6+1)12d\n12:12o(-1+1)13d\n13:13o(-1+1)14d\n14:14o(-1+2)15d\n15:15d(5+1)16n\n16:13d(2+1)17n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionASN241>
+        a                    faldo:ExactPosition ;
+        gco:has_amino_acid   <http://rdf.unicarbkb.org/amino_acid_asn> ;
+        faldo:ExactPosition  <http://rdf.unicarbkb.org/P00738ExactPositionASN241pos> ;
+        faldo:position       "241^^xsd:int" .
+
+<http://rdf.unicarbkb.org/structure/7620/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7732/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+1)u\nRES\n17b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7620>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7620> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7626>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7626> .
+
+<http://rdf.unicarbkb.org/structure/7820/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|12\nSubtreeLinkageID1:u(-1+2)u\nRES\n14b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n15s:n-acetyl\nLIN\n13:14d(5+1)15n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7784>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7784> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc1NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7784/ct> , <http://rdf.unicarbkb.org/structure/7784/gwb> ;
+        glycan:has_mass           "2661.9519804069996" ;
+        glycan:has_unicarbkb_id   "7784" ;
+        dcterms:identifier        "7784" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7597>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7597> .
+
+<http://rdf.unicarbkb.org/structure/7557/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n10s:n-acetyl\n11s:n-acetyl\n12b:a-dman-HEX-1:5\n13b:x-dglc-HEX-1:5\n14b:x-dgal-HEX-1:5\n15b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n16s:n-acetyl\n17s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:8o(-1+2)9d\n9:9d(5+1)10n\n10:7d(2+1)11n\n11:5o(6+1)12d\n12:12o(-1+1)13d\n13:13o(-1+1)14d\n14:14o(-1+2)15d\n15:15d(5+1)16n\n16:13d(2+1)17n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|9|12|13|14|15\nSubtreeLinkageID1:u(-1+1)u\nRES\n18b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7820>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7820> .
+
+<http://rdf.unicarbkb.org/structure/7802/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7529>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7529> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7529/ct> , <http://rdf.unicarbkb.org/structure/7529/gwb> ;
+        glycan:has_mass           "2005.7243679209998" ;
+        glycan:has_unicarbkb_id   "7529" ;
+        dcterms:identifier        "7529" .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/structure/7732/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}--??1L-Fuc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7557>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7557> .
+
+<http://rdf.unicarbkb.org/structure/7584/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:a-dman-HEX-1:5\n11b:x-dglc-HEX-1:5\n12b:x-dgal-HEX-1:5\n13s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:5o(6+1)10d\n10:10o(-1+1)11d\n11:11o(-1+1)12d\n12:11d(2+1)13n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7585/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7584>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7584> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7636>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7636> .
+
+<http://rdf.unicarbkb.org/structure/7708>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7708> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc3NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7708/ct> , <http://rdf.unicarbkb.org/structure/7708/gwb> ;
+        glycan:has_mass           "3244.1428134569996" ;
+        glycan:has_unicarbkb_id   "7708" ;
+        dcterms:identifier        "7708" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7799>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7799> .
+
+<http://rdf.unicarbkb.org/structure/7831/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}(--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7523>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7523> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7784>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7784> .
+
+<http://rdf.unicarbkb.org/structure/7624/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n10s:n-acetyl\n11s:n-acetyl\n12b:x-dglc-HEX-1:5\n13b:x-dgal-HEX-1:5\n14b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n15s:n-acetyl\n16s:n-acetyl\n17b:a-dman-HEX-1:5\n18b:x-dglc-HEX-1:5\n19b:x-dgal-HEX-1:5\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\n22s:n-acetyl\n23b:x-dglc-HEX-1:5\n24b:x-dgal-HEX-1:5\n25b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n26s:n-acetyl\n27s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:8o(-1+2)9d\n9:9d(5+1)10n\n10:7d(2+1)11n\n11:6o(-1+1)12d\n12:12o(-1+1)13d\n13:13o(-1+2)14d\n14:14d(5+1)15n\n15:12d(2+1)16n\n16:5o(6+1)17d\n17:17o(-1+1)18d\n18:18o(-1+1)19d\n19:19o(-1+2)20d\n20:20d(5+1)21n\n21:18d(2+1)22n\n22:17o(-1+1)23d\n23:23o(-1+1)24d\n24:24o(-1+2)25d\n25:25d(5+1)26n\n26:23d(2+1)27n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7624/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7784/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/P00738SaccSet1>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionASN241pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/7831> , <http://rdf.unicarbkb.org/saccharideSetItem/7624> , <http://rdf.unicarbkb.org/saccharideSetItem/7799> , <http://rdf.unicarbkb.org/saccharideSetItem/7752> , <http://rdf.unicarbkb.org/saccharideSetItem/7879> , <http://rdf.unicarbkb.org/saccharideSetItem/7802> , <http://rdf.unicarbkb.org/saccharideSetItem/7820> , <http://rdf.unicarbkb.org/saccharideSetItem/7584> , <http://rdf.unicarbkb.org/saccharideSetItem/7523> , <http://rdf.unicarbkb.org/saccharideSetItem/7723> , <http://rdf.unicarbkb.org/saccharideSetItem/7717> , <http://rdf.unicarbkb.org/saccharideSetItem/7585> , <http://rdf.unicarbkb.org/saccharideSetItem/7620> , <http://rdf.unicarbkb.org/saccharideSetItem/7597> , <http://rdf.unicarbkb.org/saccharideSetItem/7708> , <http://rdf.unicarbkb.org/saccharideSetItem/7529> , <http://rdf.unicarbkb.org/saccharideSetItem/7431> , <http://rdf.unicarbkb.org/saccharideSetItem/7784> , <http://rdf.unicarbkb.org/saccharideSetItem/7626> , <http://rdf.unicarbkb.org/saccharideSetItem/7732> , <http://rdf.unicarbkb.org/saccharideSetItem/7648> , <http://rdf.unicarbkb.org/saccharideSetItem/7782> , <http://rdf.unicarbkb.org/saccharideSetItem/7740> , <http://rdf.unicarbkb.org/saccharideSetItem/7557> , <http://rdf.unicarbkb.org/saccharideSetItem/7688> , <http://rdf.unicarbkb.org/saccharideSetItem/7636> , <http://rdf.unicarbkb.org/saccharideSetItem/7867> , <http://rdf.unicarbkb.org/saccharideSetItem/7468> , <http://rdf.unicarbkb.org/saccharideSetItem/7630> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal3GlcNac5Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc3NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "3"^^xsd:int ;
+        glycan:has_glcnac  "5"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7431>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7431> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7529>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7529> .
+
+<http://rdf.unicarbkb.org/structure/7879>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7879> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc2NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7879/ct> , <http://rdf.unicarbkb.org/structure/7879/gwb> ;
+        glycan:has_mass           "2733.973109779" ;
+        glycan:has_unicarbkb_id   "7879" ;
+        dcterms:identifier        "7879" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7723>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7723> .
+
+<http://rdf.unicarbkb.org/structure/7624>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7624> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc4NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7624/ct> , <http://rdf.unicarbkb.org/structure/7624/gwb> ;
+        glycan:has_mass           "3535.238229982" ;
+        glycan:has_unicarbkb_id   "7624" ;
+        dcterms:identifier        "7624" .
+
+<http://rdf.unicarbkb.org/structure/7879/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n17b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n18s:n-acetyl\nLIN\n16:17d(5+1)18n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n19b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n20s:n-acetyl\nLIN\n17:19d(5+1)20n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+1)u\nRES\n21b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7802>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7802> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7708>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7708> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7752>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7752> .
+
+<http://purl.uniprot.org/uniprot/P00738>
+        a                        gco:Glycoprotein , gco:Protein ;
+        rdfs:label               "add name description here" ;
+        rdfs:seeAlso             <http://identifiers.org/uniprot/P00738> ;
+        glycan:amino_acid_length    "1" ;
+        glycan:amino_acid_sequence  "xyz" ;
+        dcterms:identifier       "P00738" .
+
+<http://rdf.unicarbkb.org/structure/7630/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+1)u\nRES\n17b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7529/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7831>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7831> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7468>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7468> .
+
+<http://rdf.unicarbkb.org/structure/7732>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7732> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7732/ct> , <http://rdf.unicarbkb.org/structure/7732/gwb> ;
+        glycan:has_mass           "2151.782276729" ;
+        glycan:has_unicarbkb_id   "7732" ;
+        dcterms:identifier        "7732" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7879>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7879> .
+
+<http://rdf.unicarbkb.org/structure/7523/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p)--6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7740/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p}(((--??2D-NeuAc,p)--??1L-Fuc,p)--??2D-NeuAc,p)--??2D-NeuAc,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/structure/7802/gwb>
+        glycan:has_sequence            "freeEnd--?b1D-GlcNAc,p--4b1D-GlcNAc,p--4b1D-Man,p(--3/6a1D-Man,p(--??1D-GlcNAc,p--??1D-Gal,p)--??1D-GlcNAc,p--??1D-Gal,p)--3/6a1D-Man,p--??1D-GlcNAc,p--??1D-Gal,p$MONO,perMe,Na,0,freeEnd" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_gwb .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7624>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7624> .
+
+<http://rdf.unicarbkb.org/structure/7782>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7782> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7782/ct> , <http://rdf.unicarbkb.org/structure/7782/gwb> ;
+        glycan:has_mass           "2516.9144726899995" ;
+        glycan:has_unicarbkb_id   "7782" ;
+        dcterms:identifier        "7782" .
+
+<http://rdf.unicarbkb.org/P00738RegionASN241>
+        a                              faldo:region , gco:Glycosylation_site ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/7723> , <http://rdf.unicarbkb.org/referencedsaccharide/7752> , <http://rdf.unicarbkb.org/referencedsaccharide/7732> , <http://rdf.unicarbkb.org/referencedsaccharide/7782> , <http://rdf.unicarbkb.org/referencedsaccharide/7636> , <http://rdf.unicarbkb.org/referencedsaccharide/7867> , <http://rdf.unicarbkb.org/referencedsaccharide/7820> , <http://rdf.unicarbkb.org/referencedsaccharide/7585> , <http://rdf.unicarbkb.org/referencedsaccharide/7557> , <http://rdf.unicarbkb.org/referencedsaccharide/7523> , <http://rdf.unicarbkb.org/referencedsaccharide/7624> , <http://rdf.unicarbkb.org/referencedsaccharide/7740> , <http://rdf.unicarbkb.org/referencedsaccharide/7784> , <http://rdf.unicarbkb.org/referencedsaccharide/7597> , <http://rdf.unicarbkb.org/referencedsaccharide/7529> , <http://rdf.unicarbkb.org/referencedsaccharide/7799> , <http://rdf.unicarbkb.org/referencedsaccharide/7584> , <http://rdf.unicarbkb.org/referencedsaccharide/7831> , <http://rdf.unicarbkb.org/referencedsaccharide/7620> , <http://rdf.unicarbkb.org/referencedsaccharide/7630> , <http://rdf.unicarbkb.org/referencedsaccharide/7879> , <http://rdf.unicarbkb.org/referencedsaccharide/7468> , <http://rdf.unicarbkb.org/referencedsaccharide/7648> , <http://rdf.unicarbkb.org/referencedsaccharide/7688> , <http://rdf.unicarbkb.org/referencedsaccharide/7708> , <http://rdf.unicarbkb.org/referencedsaccharide/7802> , <http://rdf.unicarbkb.org/referencedsaccharide/7717> , <http://rdf.unicarbkb.org/referencedsaccharide/7431> , <http://rdf.unicarbkb.org/referencedsaccharide/7626> ;
+        gco:has_glycoform              <http://rdf.unicarbkb.org/P00738GF1> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/7723> , <http://rdf.unicarbkb.org/referencedsaccharide/7636> , <http://rdf.unicarbkb.org/referencedsaccharide/7799> , <http://rdf.unicarbkb.org/referencedsaccharide/7648> , <http://rdf.unicarbkb.org/referencedsaccharide/7468> , <http://rdf.unicarbkb.org/referencedsaccharide/7717> , <http://rdf.unicarbkb.org/referencedsaccharide/7879> , <http://rdf.unicarbkb.org/referencedsaccharide/7784> , <http://rdf.unicarbkb.org/referencedsaccharide/7740> , <http://rdf.unicarbkb.org/referencedsaccharide/7752> , <http://rdf.unicarbkb.org/referencedsaccharide/7802> , <http://rdf.unicarbkb.org/referencedsaccharide/7523> , <http://rdf.unicarbkb.org/referencedsaccharide/7708> , <http://rdf.unicarbkb.org/referencedsaccharide/7688> , <http://rdf.unicarbkb.org/referencedsaccharide/7831> , <http://rdf.unicarbkb.org/referencedsaccharide/7732> , <http://rdf.unicarbkb.org/referencedsaccharide/7597> , <http://rdf.unicarbkb.org/referencedsaccharide/7584> , <http://rdf.unicarbkb.org/referencedsaccharide/7626> , <http://rdf.unicarbkb.org/referencedsaccharide/7620> , <http://rdf.unicarbkb.org/referencedsaccharide/7820> , <http://rdf.unicarbkb.org/referencedsaccharide/7529> , <http://rdf.unicarbkb.org/referencedsaccharide/7624> , <http://rdf.unicarbkb.org/referencedsaccharide/7557> , <http://rdf.unicarbkb.org/referencedsaccharide/7431> , <http://rdf.unicarbkb.org/referencedsaccharide/7585> , <http://rdf.unicarbkb.org/referencedsaccharide/7782> , <http://rdf.unicarbkb.org/referencedsaccharide/7630> , <http://rdf.unicarbkb.org/referencedsaccharide/7867> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/P00738SaccSet1> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionASN241> .
+
+<http://rdf.unicarbkb.org/structure/7740>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7740> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal3GlcNac5Man3NeuAc3NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7740/ct> , <http://rdf.unicarbkb.org/structure/7740/gwb> ;
+        glycan:has_mass           "3025.0685263039995" ;
+        glycan:has_unicarbkb_id   "7740" ;
+        dcterms:identifier        "7740" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7626>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7626> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7597>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7597> .
+
+<http://rdf.unicarbkb.org/referencedprotein/P00738>
+        a                       gco:Referenced_protein ;
+        gco:glycosylated_at     <http://rdf.unicarbkb.org/P00738RegionASN241> ;
+        gco:has_glycoform       <http://rdf.unicarbkb.org/P00738GF1> ;
+        gco:has_protein         <http://purl.uniprot.org/uniprot/P00738> ;
+        gco:has_saccharide_set  <http://rdf.unicarbkb.org/P00738SaccSet1> ;
+        glycan:has_glycan       <http://rdf.unicarbkb.org/structure/7597> , <http://rdf.unicarbkb.org/structure/7523> , <http://rdf.unicarbkb.org/structure/7784> , <http://rdf.unicarbkb.org/structure/7740> , <http://rdf.unicarbkb.org/structure/7752> , <http://rdf.unicarbkb.org/structure/7717> , <http://rdf.unicarbkb.org/structure/7529> , <http://rdf.unicarbkb.org/structure/7630> , <http://rdf.unicarbkb.org/structure/7626> , <http://rdf.unicarbkb.org/structure/7620> , <http://rdf.unicarbkb.org/structure/7648> , <http://rdf.unicarbkb.org/structure/7468> , <http://rdf.unicarbkb.org/structure/7802> , <http://rdf.unicarbkb.org/structure/7782> , <http://rdf.unicarbkb.org/structure/7557> , <http://rdf.unicarbkb.org/structure/7867> , <http://rdf.unicarbkb.org/structure/7879> , <http://rdf.unicarbkb.org/structure/7624> , <http://rdf.unicarbkb.org/structure/7431> , <http://rdf.unicarbkb.org/structure/7636> , <http://rdf.unicarbkb.org/structure/7732> , <http://rdf.unicarbkb.org/structure/7708> , <http://rdf.unicarbkb.org/structure/7799> , <http://rdf.unicarbkb.org/structure/7688> , <http://rdf.unicarbkb.org/structure/7723> , <http://rdf.unicarbkb.org/structure/7585> , <http://rdf.unicarbkb.org/structure/7584> , <http://rdf.unicarbkb.org/structure/7820> , <http://rdf.unicarbkb.org/structure/7831> .
+
+<http://rdf.unicarbkb.org/structure/7648>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7648> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7648/ct> , <http://rdf.unicarbkb.org/structure/7648/gwb> ;
+        glycan:has_mass           "1786.650080768" ;
+        glycan:has_unicarbkb_id   "7648" ;
+        dcterms:identifier        "7648" .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal2GlcNac4Man3NeuAc0NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal2GlcNac4Man3NeuAc1NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "2"^^xsd:int ;
+        glycan:has_glcnac  "4"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "1"^^xsd:int .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7732>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7732> .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc2NeuGc0Glc0GalNac0S0P0>
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "2"^^xsd:int .
+
+<http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc1Gal4GlcNac6Man3NeuAc3NeuGc0Glc0GalNac0S0P0>
+        glycan:has_fuc     "1"^^xsd:int ;
+        glycan:has_gal     "4"^^xsd:int ;
+        glycan:has_glcnac  "6"^^xsd:int ;
+        glycan:has_man     "3"^^xsd:int ;
+        glycan:has_neuac   "3"^^xsd:int .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionASN241pos>
+        faldo:position  "241^^xsd:int" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7584>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7584> .
+
+<http://rdf.unicarbkb.org/structure/7431/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n20b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7529/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/structure/7468/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\n17b:x-dglc-HEX-1:5\n18b:x-dgal-HEX-1:5\n19s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\n16:13o(-1+1)17d\n17:17o(-1+1)18d\n18:17d(2+1)19n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n20b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n21s:n-acetyl\nLIN\n19:20d(5+1)21n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n22b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n23s:n-acetyl\nLIN\n20:22d(5+1)23n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+2)u\nRES\n24b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n25s:n-acetyl\nLIN\n21:24d(5+1)25n\nUND4:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15|17|18\nSubtreeLinkageID1:u(-1+1)u\nRES\n26b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7782>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7782> .
+
+<http://rdf.unicarbkb.org/structure/7585>
+        a                         glycan:Saccharide ;
+        rdfs:seeAlso              <http://www.unicarbkb.org/structure/7585> ;
+        glycan:has_composition    <http://rdf.unicarbkb.org/composition/Kdn0GlcA0Xyl0Fuc0Gal4GlcNac6Man3NeuAc0NeuGc0Glc0GalNac0S0P0> ;
+        glycan:has_glycosequence  <http://rdf.unicarbkb.org/structure/7585/ct> , <http://rdf.unicarbkb.org/structure/7585/gwb> ;
+        glycan:has_mass           "2370.8565638819996" ;
+        glycan:has_unicarbkb_id   "7585" ;
+        dcterms:identifier        "7585" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7740>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7740> .
+
+<http://rdf.unicarbkb.org/structure/7831/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n17b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n18s:n-acetyl\nLIN\n16:17d(5+1)18n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n19b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n20s:n-acetyl\nLIN\n17:19d(5+1)20n" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<asparagine>  a  glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/7784>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/7784> .
+
+<http://rdf.unicarbkb.org/structure/7740/ct>
+        glycan:has_sequence            "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:b-dglc-HEX-1:5\n4s:n-acetyl\n5b:b-dman-HEX-1:5\n6b:a-dman-HEX-1:5\n7b:x-dglc-HEX-1:5\n8b:x-dgal-HEX-1:5\n9s:n-acetyl\n10b:x-dglc-HEX-1:5\n11b:x-dgal-HEX-1:5\n12s:n-acetyl\n13b:a-dman-HEX-1:5\n14b:x-dglc-HEX-1:5\n15b:x-dgal-HEX-1:5\n16s:n-acetyl\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3d(2+1)4n\n4:3o(4+1)5d\n5:5o(3|6+1)6d\n6:6o(-1+1)7d\n7:7o(-1+1)8d\n8:7d(2+1)9n\n9:6o(-1+1)10d\n10:10o(-1+1)11d\n11:10d(2+1)12n\n12:5o(3|6+1)13d\n13:13o(-1+1)14d\n14:14o(-1+1)15d\n15:14d(2+1)16n\nUND\nUND1:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n17b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n18s:n-acetyl\nLIN\n16:17d(5+1)18n\nUND2:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n19b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n20s:n-acetyl\nLIN\n17:19d(5+1)20n\nUND3:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+2)u\nRES\n21b:x-dgro-dgal-NON-2:6|1:a|2:keto|3:d\n22s:n-acetyl\nLIN\n18:21d(5+1)22n\nUND4:100.0:100.0\nParentIDs:1|3|5|6|7|8|10|11|13|14|15\nSubtreeLinkageID1:u(-1+1)u\nRES\n23b:x-lgal-HEX-1:5|6:d" ;
+        glycan:in_carbohydrate_format  glycan:carbohydrate_format_glycoct .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/7648>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/7648> .

@@ -1,0 +1,304 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ms:    <http://www.berkeleybop.org/ontologies/ms.owl> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix gco:   <http://purl.jp/bio/12/glyco/conjugate#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uk:    <http://purl.org/unicarbkb/> .
+@prefix faldo: <http://www.biohackathon.org/resource/faldo/> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix pato:  <http://purl.obolibrary.org/obo/uo.owl> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bibo:  <http://purl.org/ontology/bibo/> .
+@prefix unicorn: <http://purl.jp/bio/12/glyco/unicorn/> .
+@prefix uniprot: <http://purl.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix gmd:   <http://purl.jp/bio/12/glyco/glycomethod#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://rdf.unicarbkb.org/P00738Region3>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8093> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8093> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet3> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn241> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_8093>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_8093> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound437accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/8093> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound434accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/4923> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet4>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_385908910> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_385908910>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_385908910> .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionAsn241>
+        a                    faldo:ExactPosition ;
+        gco:has_amino_acid   <http://rdf.unicarbkb.org/amino_acid_asn> ;
+        faldo:ExactPosition  <http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos> ;
+        faldo:position       "241^^xsd:int" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4923>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_4923> .
+
+<http://rdf.unicarbkb.org/taxonomy/245411>
+        a                       <http://purl.uniprot.org/core/Taxon> ;
+        rdfs:subClassOf         <http://purl.uniprot.org/taxonomy/245411> ;
+        uniprot:scientificName  "homo sapiens" .
+
+<http://rdf.unicarbkb.org/P00738Region2>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_7872> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_7872> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet2> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn241> .
+
+<http://rdf.unicarbkb.org/author/Yu_CY>
+        a          dc:contributor ;
+        foaf:name  "Yu_CY" .
+
+<http://rdf.unicarbkb.org/source/210>
+        a                 glycan:Source_natural ;
+        glycan:has_taxon  <http://rdf.unicarbkb.org/taxonomy/245411> .
+
+<http://rdf.unicarbkb.org/journal/3>
+        a                bibo:Journal ;
+        dc:title         "\"ANALYTICAL CHEMISTRY\"" ;
+        bibo:shortTitle  "\"Anal Chem\"" .
+
+<asparagine>  a  glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet3>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_8093> .
+
+<http://rdf.unicarbkb.org/author/Song_E>
+        a          dc:contributor ;
+        foaf:name  "Song_E" .
+
+<http://purl.uniprot.org/uniprot/P00738>
+        a                        gco:Glycoprotein , gco:Protein ;
+        rdfs:label               "add name description here" ;
+        rdfs:seeAlso             <http://identifiers.org/uniprot/P00738> ;
+        glycan:amino_acid_length    "1" ;
+        glycan:amino_acid_sequence  "xyz" ;
+        dcterms:identifier       "P00738" .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound436accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/4923> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound433accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/385908910> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_7872>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "7872" ;
+        dcterms:identifier       "7872" .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_4923>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_4923> .
+
+<http://rdf.unicarbkb.org/amino_acid_asn>
+        a               glycan:amino_acid ;
+        glycan:amino_acid  "Asn" .
+
+<http://rdf.unicarbkb.org/P00738Region1>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_385908910> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_385908910> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet1> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn184> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_385908910>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_385908910> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_385908910>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "385908910" ;
+        dcterms:identifier       "385908910" .
+
+<http://rdf.unicarbkb.org/structure/uc_g_8093>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "8093" ;
+        dcterms:identifier       "8093" .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet2>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_7872> .
+
+<http://rdf.unicarbkb.org/P00738Region6>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4923> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4923> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet6> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn241> .
+
+<http://rdf.unicarbkb.org/author/Mayampurath_A>
+        a          dc:contributor ;
+        foaf:name  "Mayampurath_A" .
+
+<http://rdf.unicarbkb.org/author/Mechref_Y>
+        a          dc:contributor ;
+        foaf:name  "Mechref_Y" .
+
+<http://rdf.unicarbkb.org/disease/Pooled esophageal cancer and Control>
+        rdfs:label    "Pooled esophageal cancer and Control" ;
+        rdfs:seeAlso  "https://meshb.nlm.nih.gov/record/ui?ui=D007589" ;
+        gco:has_note  "Pooled esophageal cancer and Control" ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "Pooled esophageal cancer and Control" .
+
+<http://rdf.unicarbkb.org/referencedprotein/P00738>
+        a                       gco:Referenced_protein ;
+        gco:glycosylated_at     <http://rdf.unicarbkb.org/P00738Region2> , <http://rdf.unicarbkb.org/P00738Region1> , <http://rdf.unicarbkb.org/P00738Region4> , <http://rdf.unicarbkb.org/P00738Region6> , <http://rdf.unicarbkb.org/P00738Region3> , <http://rdf.unicarbkb.org/P00738Region5> ;
+        gco:has_protein         <http://purl.uniprot.org/uniprot/P00738> ;
+        gco:has_saccharide_set  <http://rdf.unicarbkb.org/griffithP00738SaccSet2> , <http://rdf.unicarbkb.org/griffithP00738SaccSet3> , <http://rdf.unicarbkb.org/griffithP00738SaccSet6> , <http://rdf.unicarbkb.org/griffithP00738SaccSet4> , <http://rdf.unicarbkb.org/griffithP00738SaccSet5> , <http://rdf.unicarbkb.org/griffithP00738SaccSet1> ;
+        glycan:has_glycan       <http://rdf.unicarbkb.org/structure/uc_g_7872> , <http://rdf.unicarbkb.org/structure/uc_g_8093> , <http://rdf.unicarbkb.org/structure/uc_g_385908910> , <http://rdf.unicarbkb.org/structure/uc_g_4923> .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet1>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn184pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_385908910> .
+
+<threonine>  a  glycan:amino_acid .
+
+<serine>  a     glycan:amino_acid .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionAsn184pos>
+        faldo:position  "184^^xsd:int" .
+
+<http://rdf.unicarbkb.org/P00738Region5>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4923> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_4923> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet5> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn184> .
+
+<http://rdf.unicarbkb.org/structure/uc_g_4923>
+        a                        glycan:Saccharide ;
+        rdfs:seeAlso             "empty" ;
+        glycan:has_unicarbkb_id  "4923" ;
+        dcterms:identifier       "4923" .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet6>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_4923> .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionAsn184>
+        a                    faldo:ExactPosition ;
+        gco:has_amino_acid   <http://rdf.unicarbkb.org/amino_acid_asn> ;
+        faldo:ExactPosition  <http://rdf.unicarbkb.org/P00738ExactPositionAsn184pos> ;
+        faldo:position       "184^^xsd:int" .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_7872>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_7872> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound438accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/7872> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/referencecglycoconjugate/gc_compound435accP00738>
+        a                         gco:Referenced_glycoconjugate ;
+        gco:has_protein_part     <http://rdf.unicarbkb.org/referencedprotein/P00738> ;
+        gco:has_saccharide_part  <http://rdf.unicarbkb.org/referencedsaccharideexcel/385908910> ;
+        glycan:has_association    <http://rdf.unicarbkb.org/diseaseassociation/D007589> ;
+        glycan:is_from_source     <http://rdf.unicarbkb.org/source/210> ;
+        glycan:published_in       <http://rdf.unicarbkb.org/reference/24279413> .
+
+<http://rdf.unicarbkb.org/author/Tang_H.>
+        a          dc:contributor ;
+        foaf:name  "Tang_H." .
+
+<http://rdf.unicarbkb.org/P00738Region4>
+        a                              gco:Glycosylation_site , faldo:region ;
+        gco:has_attached_referenced_saccharide
+                <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_385908910> ;
+        gco:has_saccharide  <http://rdf.unicarbkb.org/referencedsaccharide/uc_g_385908910> ;
+        gco:has_saccharide_set         <http://rdf.unicarbkb.org/griffithP00738SaccSet4> ;
+        faldo:ExactPosition            <http://rdf.unicarbkb.org/P00738ExactPositionAsn241> .
+
+<http://rdf.unicarbkb.org/P00738ExactPositionAsn241pos>
+        faldo:position  "241^^xsd:int" .
+
+<http://rdf.unicarbkb.org/reference/24279413>
+        a                 bibo:Article ;
+        glycan:has_pmid   "24279413" ;
+        dc:creator        "Mayampurath A, Yu CY, Song E, Balan J, Mechref Y, Tang H." ;
+        dc:title          "Computational framework for identification of intact glycopeptides in complex samples" ;
+        dcterms:isPartOf  <http://rdf.unicarbkb.org/journal/3> ;
+        dcterms:issued    "2014" ;
+        bibo:authorList   <http://rdf.unicarbkb.org/author/Mechref_Y> , <http://rdf.unicarbkb.org/author/Mayampurath_A> , <http://rdf.unicarbkb.org/author/Balan_J> , <http://rdf.unicarbkb.org/author/Yu_CY> , <http://rdf.unicarbkb.org/author/Song_E> , <http://rdf.unicarbkb.org/author/Tang_H.> ;
+        bibo:pageEnd      "63" ;
+        bibo:pageStart    "453" ;
+        bibo:volume       "86(1)" ;
+        owl:sameAs        <http://www.ncbi.nlm.nih.gov/pubmed/24279413> .
+
+<http://rdf.unicarbkb.org/referencedsaccharide/uc_g_8093>
+        a                  gco:Referenced_saccharide ;
+        glycan:has_glycan  <http://rdf.unicarbkb.org/structure/uc_g_8093> .
+
+<http://rdf.unicarbkb.org/griffithP00738SaccSet5>
+        a                         gco:Saccharide_Set ;
+        gco:glycosylates_at       <http://rdf.unicarbkb.org/P00738ExactPositionAsn184pos> ;
+        sio:is-component-part-of  <http://rdf.unicarbkb.org/saccharideSetItem/uc_g_4923> .
+
+<http://rdf.unicarbkb.org/saccharideSetItem/uc_g_7872>
+        a           gco:Saccharide_Set_Item ;
+        owl:sameAs  <http://rdf.unicarbkb.org/structure/uc_g_7872> .
+
+<http://rdf.unicarbkb.org/diseaseassociation/D007589>
+        sio:SIO_000628  <http://rdf.unicarbkb.org/disease/Pooled esophageal cancer and Control> .
+
+<http://rdf.unicarbkb.org/author/Balan_J>
+        a          dc:contributor ;
+        foaf:name  "Balan_J" .
