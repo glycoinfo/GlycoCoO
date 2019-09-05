@@ -1,0 +1,29 @@
+# UniCarbKB
+
+This repository is a platform for unicarbkb 2.0 which is under development in partnership with GlyGen. 
+
+Users are expected to cite source of data in agreement with terms outlined by the Creative Commons License https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Please cite: 
+Campbell, M.P., Peterson, R., Mariethoz, J., Gasteiger, E., Akune, Y., Aoki-Kinoshita, K.F., Lisacek, F. and Packer, N.H., 2013. UniCarbKB: building a knowledge platform for glycoproteomics. Nucleic acids research, 42(D1), pp.D215-D221.
+
+Acknowledge funding from NeCTAR (RT 016) and NIH Glycoscience Common Fund (GlyGen)
+
+
+
+# Attribution
+If using this data you are required to attribute the source including database name (UniCarbKB) and provide a link to all curated material. 
+
+Please cite:
+* https://academic.oup.com/nar/article/42/D1/D215/1052197
+* https://doi.org/10.1093/nar/gkt1128
+
+
+# Acknowledgements
+
+All developers and curators of GlycoSuite, EUROCarbDB and UniCarbKB 1.0.
+
+GlyGen developers for supporting UniCarbKB 2.0
+
+Members of GlycoRDF and GlycoCoo (https://github.com/glycoinfo/GlycoCoO)
+
