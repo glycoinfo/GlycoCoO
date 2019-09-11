@@ -7,12 +7,11 @@ Users are expected to cite source of data in agreement with terms outlined by th
 Please cite: 
 Campbell, M.P., Peterson, R., Mariethoz, J., Gasteiger, E., Akune, Y., Aoki-Kinoshita, K.F., Lisacek, F. and Packer, N.H., 2013. UniCarbKB: building a knowledge platform for glycoproteomics. Nucleic acids research, 42(D1), pp.D215-D221.
 
-Acknowledge funding from NeCTAR (RT 016) and NIH Glycoscience Common Fund (GlyGen)
-
+Acknowledge funding from NeCTAR (RT 016), Australian Research Data Commons (ARDC) and NIH Glycoscience Common Fund (GlyGen)
 
 
 # Attribution
-If using this data you are required to attribute the source including database name (UniCarbKB) and provide a link to all curated material. 
+We ask that any data used is kindly attributed to UniCarbKB and any cross-references is appreciated.
 
 Please cite:
 * https://academic.oup.com/nar/article/42/D1/D215/1052197
@@ -21,7 +20,7 @@ Please cite:
 
 # Acknowledgements
 
-All developers and curators of GlycoSuite, EUROCarbDB and UniCarbKB 1.0.
+The developers acknowledge GlycoSuiteDB, EUROCarbDB, GlycoBase (now GlycoStore) and all biocurators involved in these projects.
 
 GlyGen developers for supporting UniCarbKB 2.0
 
