@@ -63,45 +63,85 @@ ORDER BY ?g
 
 # Source Part
 ```
+# Source Part
 prefix glycan:<http://purl.jp/bio/12/glyco/glycan#>
 prefix gco:<http://purl.jp/bio/12/glyco/conjugate#>
 prefix dcterms:<http://purl.org/dc/terms/>
 prefix faldo:<http://biohackathon.org/resource/faldo#>
 prefix sio:<http://semanticscience.org/resource/>
 prefix dcterms:<http://purl.org/dc/terms/>
-
-select distinct ?g ?tissue ?cell_line ?taxon ?uniprot_id
+prefix up: <http://purl.uniprot.org/core/>
+select distinct ?g ?uniprot_id ?tissue ?cell_line ?organism 
 where
 {
+    {
 graph ?g {
+VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconnect> <http://glycoinfo.org/glycocoo/unicarbkb> }
 ?glycoconjugate_ref glycan:is_from_source ?source ;
                                      gco:has_protein_part ?protein_part .
 optional{?source glycan:has_tissue ?tissue .}
 optional{?source glycan:has_cell_line ?cell_line .}
-optional{?source glycan:has_taxon ?taxon .}
+#optional{?source glycan:has_taxon ?taxon .}
 
 # glyconnect
 {
+optional {
+?source glycan:has_taxon ?taxon .
+?taxon rdfs:label ?organism .
+}
+
 ?protein_part gco:glycosylated_at ?protein .
 ?protein faldo:location ?location .
-?location rdfs:seeAlso ?uniprot_id .
+?location rdfs:seeAlso ?uniprot .
+?ExactPosition rdfs:seeAlso ?uniprot .
 ?location a faldo:ExactPosition .
+FILTER CONTAINS (str(?uniprot), ?uniprot_id)
+VALUES ?uniprot_id { "P00738" }
 }
 union
 # unicarbkb
 {
+optional{
+?source glycan:has_taxon ?taxon .
+?taxon up:scientificName ?organism .
+}
+
 ?protein_part gco:has_protein ?protein .
 ?protein dcterms:identifier ?uniprot_id .
+VALUES ?uniprot_id { "P00738" }
 }
-union
+}
+    }
+    UNION
+    {
 # GlycoNAVI
-{
-?protein_part gco:has_protein ?protein .
+SERVICE <https://sparql.glyconavi.org/sparql> {
+graph ?g {
+VALUES ?g {   <http://glycoinfo.org/glycocoo/glyconavi>  }
+
+?glycoconjugate_ref glycan:is_from_source ?source ;
+                                     gco:has_protein_part ?protein_part .
+optional{?source glycan:has_tissue ?tissue .}
+optional{?source glycan:has_cell_line ?cell_line .}
+optional{
+?source glycan:has_taxon ?taxon .
+?taxon rdfs:label ?organism .
+}
+
+?ref_conjugate gco:has_protein_part ?ref_protein .
+?ref_protein gco:glycosylated_at ?region .
+?region faldo:location ?location .
+OPTIONAL { ?location rdfs:label ?location_label . }
+?location faldo:position ?position .
+?ref_protein gco:has_protein ?protein .
 ?protein rdfs:seeAlso ?uniprot .
 ?uniprot dcterms:identifier ?uniprot_id .
+VALUES ?uniprot_id { "P00738" }
 }
 }
+    }
 }
+order by ?g ?tissue ?cell_line ?taxon
 ```
 
 # Citation Part
