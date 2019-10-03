@@ -146,43 +146,74 @@ order by ?g ?tissue ?cell_line ?taxon
 
 # Citation Part
 ```
+# Citation part
 prefix glycan:<http://purl.jp/bio/12/glyco/glycan#>
 prefix foaf:<http://xmlns.com/foaf/0.1/>
 prefix gco:<http://purl.jp/bio/12/glyco/conjugate#>
 prefix faldo:<http://biohackathon.org/resource/faldo#>
 prefix dcterms:<http://purl.org/dc/terms/>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-select distinct ?g ?pubmed ?uniprot_id
+select distinct ?g ?uniprot_id (str (?pmid ) AS ?PMID )
 where
 {
+    {
 graph ?g {
-{
-?glycoconjugate_ref glycan:published_in ?citation ;
-                                     gco:has_protein_part ?protein_part .
-?citation foaf:primaryTopic | owl:sameAs | rdfs:seeAlso ?pubmed .
+VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconnect> <http://glycoinfo.org/glycocoo/unicarbkb>}
+
+
+?glycoconjugate_ref glycan:published_in ?citation .
+?glycoconjugate_ref gco:has_protein_part ?protein_part .
 
 # glyconnect
 {
 ?protein_part gco:glycosylated_at ?protein .
 ?protein faldo:location ?location .
-?location rdfs:seeAlso ?uniprot_id .
+?location rdfs:seeAlso ?uniprot .
+FILTER CONTAINS (str(?uniprot), ?uniprot_id)
+VALUES ?uniprot_id { "P00738" }
 ?location a faldo:ExactPosition .
+OPTIONAL { 
+?citation foaf:primaryTopic ?pubmed .
+BIND(REPLACE(str ( ?pubmed ), 'http://www.ncbi.nlm.nih.gov/pubmed/', '') AS ?pmid)
+}
 }
 union
 # unicarbkb
 {
 ?protein_part gco:has_protein ?protein .
 ?protein dcterms:identifier ?uniprot_id .
+VALUES ?uniprot_id { "P00738" }
+OPTIONAL { 
+	# citaion http://rdf.unicarbkb.org/reference/24279413
+?citation owl:sameAs ?pubmed . 
+?citation glycan:has_pmid ?pmid .
 }
-union
-# GlycoNAVI
-{
+}
+}
+    }
+    UNION
+    {
+	# GlycoNAVI
+SERVICE <https://sparql.glyconavi.org/sparql> {
+graph ?g {
+VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconavi>}
+?glycoconjugate_ref glycan:published_in ?citation .
+?glycoconjugate_ref gco:has_protein_part ?protein_part .
+
 ?protein_part gco:has_protein ?protein .
 ?protein rdfs:seeAlso ?uniprot .
 ?uniprot dcterms:identifier ?uniprot_id .
+VALUES ?uniprot_id { "P00738" }
+OPTIONAL { 
+?citation  rdfs:seeAlso ?pubmed . 
+?pubmed dcterms:identifier ?pmid .
+}
+
 }
 }
-}
+    }
 }
 ```
 
