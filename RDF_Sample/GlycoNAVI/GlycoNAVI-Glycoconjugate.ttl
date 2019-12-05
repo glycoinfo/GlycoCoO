@@ -83,6 +83,9 @@ da:DA_4_ReferenceEntity
         glycan:is_from_source    da:DA_4_Source ;
         glycan:published_in      da:DA_4_Citation .
 
+da:DA_4_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_4_Entity_Set_2_SetItem_5
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_4_Entity_Set_2_SetItem_5_Glycan_AH-28_G36523TZ .
@@ -508,6 +511,9 @@ da:DA_5_ReferenceEntity
         glycan:has_association   gd:DA_5_DiseaseAssociation ;
         glycan:is_from_source    da:DA_5_Source ;
         glycan:published_in      da:DA_5_Citation .
+
+da:DA_5_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_5_Entity_Set_2_SetItem_7_Glycan_AH-28_G63889NK_Abundance
         a               gco:Relative_abundance ;
@@ -983,6 +989,9 @@ da:DA_6_ReferenceEntity
         glycan:is_from_source    da:DA_6_Source ;
         glycan:published_in      da:DA_6_Citation .
 
+da:DA_6_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_6_Source  a   glycan:Source_natural ;
         rdfs:label  "Source of DA_6" .
 
@@ -1147,6 +1156,9 @@ da:DA_7_ReferenceEntity
         gco:has_saccharide_part  da:DA_7_ReferencedSaccharide ;
         glycan:is_from_source    da:DA_7_Source ;
         glycan:published_in      da:DA_7_Citation .
+
+da:DA_7_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gtc:G21897ZX  rdfs:seeAlso  gtci:G21897ZX ;
         dcterms:identifier  "G21897ZX" .
@@ -1977,6 +1989,9 @@ da:DA_8_ReferenceEntity
         glycan:is_from_source    da:DA_8_Source ;
         glycan:published_in      da:DA_8_Citation .
 
+da:DA_8_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_8_Entity_Set_3_SetItem_4
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_8_Entity_Set_3_SetItem_4_Glycan_AH-31_G2 .
@@ -2159,6 +2174,9 @@ da:DA_9_ReferenceEntity
         glycan:has_association   gd:DA_9_DiseaseAssociation ;
         glycan:is_from_source    da:DA_9_Source ;
         glycan:published_in      da:DA_9_Citation .
+
+da:DA_9_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gtc:G74508NJ  rdfs:seeAlso  gtci:G74508NJ ;
         dcterms:identifier  "G74508NJ" .
@@ -2901,6 +2919,9 @@ da:DA_10_ReferenceEntity
         glycan:is_from_source    da:DA_10_Source ;
         glycan:published_in      da:DA_10_Citation .
 
+da:DA_10_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 gtc:G21897ZX  rdfs:seeAlso  gtci:G21897ZX ;
         dcterms:identifier  "G21897ZX" .
 
@@ -3380,6 +3401,9 @@ da:DA_42_ReferenceEntity
         glycan:is_from_source    da:DA_42_Source ;
         glycan:published_in      da:DA_42_Citation .
 
+da:DA_42_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_42_Entity_Set_2_SetItem_1_Glycan_AH-18_G1_Abundance
         a               gco:Relative_abundance ;
         rdfs:comment    "Relative abundance ratio (AH-18_G1): 3%" ;
@@ -3756,6 +3780,9 @@ da:DA_43_ReferenceEntity
         glycan:is_from_source    da:DA_43_Source ;
         glycan:published_in      da:DA_43_Citation .
 
+da:DA_43_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_43_Entity_Set_2_SetItem_3_Glycan_AH-19_G86527PE
         rdfs:label          "Glycan:AH-19_G86527PE" ;
         gco:relative_abundance_percentage
@@ -3886,6 +3913,9 @@ da:DA_44_ReferenceEntity
         glycan:has_association   gd:DA_44_DiseaseAssociation ;
         glycan:is_from_source    da:DA_44_Source ;
         glycan:published_in      da:DA_44_Citation .
+
+da:DA_44_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gd:DA_44_DiseaseAssociation
         a               codao:CompoundDiseaseAssosiation ;
@@ -4057,6 +4087,9 @@ da:DA_45_ReferenceEntity
         glycan:is_from_source    da:DA_45_Source ;
         glycan:published_in      da:DA_45_Citation .
 
+da:DA_45_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 gd:DA_45_DiseaseAssociation
         a               codao:CompoundDiseaseAssosiation ;
         rdfs:label      "Disease_Association of DA_45" ;
@@ -4107,6 +4140,9 @@ da:DA_46_ReferenceEntity
         glycan:has_association   gd:DA_46_DiseaseAssociation ;
         glycan:is_from_source    da:DA_46_Source ;
         glycan:published_in      da:DA_46_Citation .
+
+da:DA_46_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 pubmed:16385567  rdfs:label  "PMID:16385567" ;
         dcterms:identifier  "16385567" .
@@ -4295,6 +4331,9 @@ da:DA_47_ReferenceEntity
         glycan:is_from_source    da:DA_47_Source ;
         glycan:published_in      da:DA_47_Citation .
 
+da:DA_47_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_47_Protein  a            glycan:Glycoprotein ;
         rdfs:label             "Protein of DA_47" ;
         rdfs:seeAlso           uniprot:P00738 ;
@@ -4367,6 +4406,9 @@ da:DA_48_ReferenceEntity
         glycan:has_association   gd:DA_48_DiseaseAssociation ;
         glycan:is_from_source    da:DA_48_Source ;
         glycan:published_in      da:DA_48_Citation .
+
+da:DA_48_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gd:pancreatic_cancer  a  obo:DOID_1793 ;
         rdfs:label     "pancreatic cancer" ;
@@ -4541,6 +4583,9 @@ da:DA_49_ReferenceEntity
         glycan:is_from_source    da:DA_49_Source ;
         glycan:published_in      da:DA_49_Citation .
 
+da:DA_49_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_49_Entity_Set_2_SetItem_1
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_49_Entity_Set_2_SetItem_1_Glycan_AH-18_G1 .
@@ -4666,6 +4711,9 @@ da:DA_50_ReferenceEntity
         glycan:has_association   gd:DA_50_DiseaseAssociation ;
         glycan:is_from_source    da:DA_50_Source ;
         glycan:published_in      da:DA_50_Citation .
+
+da:DA_50_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 id_pubmed:16385567  rdfs:label  "PMID:16385567" ;
         dcterms:identifier  "16385567" .
@@ -4823,6 +4871,9 @@ da:DA_51_ReferenceEntity
         glycan:is_from_source    da:DA_51_Source ;
         glycan:published_in      da:DA_51_Citation .
 
+da:DA_51_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_51_Entity_Set_1
         a               sio:SIO_000289 ;
         rdfs:label      "Set 2 of DA_51" ;
@@ -4904,6 +4955,9 @@ da:DA_52_ReferenceEntity
         glycan:has_association   gd:DA_52_DiseaseAssociation ;
         glycan:is_from_source    da:DA_52_Source ;
         glycan:published_in      da:DA_52_Citation .
+
+da:DA_52_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 pubmed:16385567  rdfs:label  "PMID:16385567" ;
         dcterms:identifier  "16385567" .
@@ -5091,6 +5145,9 @@ da:DA_53_ReferenceEntity
         glycan:is_from_source    da:DA_53_Source ;
         glycan:published_in      da:DA_53_Citation .
 
+da:DA_53_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_53_Source  a            glycan:Source_natural ;
         rdfs:label            "Source of DA_53" ;
         glycan:has_cell_line  "PK8" .
@@ -5185,6 +5242,9 @@ da:DA_54_ReferenceEntity
         glycan:has_association   gd:DA_54_DiseaseAssociation ;
         glycan:is_from_source    da:DA_54_Source ;
         glycan:published_in      da:DA_54_Citation .
+
+da:DA_54_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gd:pancreatic_cancer  a  obo:DOID_1793 ;
         rdfs:label     "pancreatic cancer" ;
@@ -5351,6 +5411,9 @@ da:DA_55_ReferenceEntity
         glycan:is_from_source    da:DA_55_Source ;
         glycan:published_in      da:DA_55_Citation .
 
+da:DA_55_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_55_Position_not_provided
         a       faldo:FuzzyPosition .
 
@@ -5434,6 +5497,9 @@ da:DA_56_ReferenceEntity
         glycan:has_association   gd:DA_56_DiseaseAssociation ;
         glycan:is_from_source    da:DA_56_Source ;
         glycan:published_in      da:DA_56_Citation .
+
+da:DA_56_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_56_Position_not_provided
         a       faldo:FuzzyPosition .
@@ -5723,6 +5789,9 @@ da:DA_112_ReferenceEntity
         glycan:is_from_source    da:DA_112_Source ;
         glycan:published_in      da:DA_112_Citation .
 
+da:DA_112_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_112_Entity_Set_2_SetItem_7
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_112_Entity_Set_2_SetItem_7_Glycan_AH-121_G7 .
@@ -5853,6 +5922,9 @@ da:DA_113_ReferenceEntity
         glycan:has_association   gd:DA_113_DiseaseAssociation ;
         glycan:is_from_source    da:DA_113_Source ;
         glycan:published_in      da:DA_113_Citation .
+
+da:DA_113_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gtc:G65191ST  rdfs:seeAlso  gtci:G65191ST ;
         dcterms:identifier  "G65191ST" .
@@ -6219,6 +6291,9 @@ da:DA_114_ReferenceEntity
         glycan:is_from_source    da:DA_114_Source ;
         glycan:published_in      da:DA_114_Citation .
 
+da:DA_114_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 gtc:G00031MO  rdfs:seeAlso  gtci:G00031MO ;
         dcterms:identifier  "G00031MO" .
 
@@ -6423,6 +6498,9 @@ da:DA_115_ReferenceEntity
         glycan:is_from_source    da:DA_115_Source ;
         glycan:published_in      da:DA_115_Citation .
 
+da:DA_115_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_115_Entity_Set_2_SetItem_2_Glycan_AH-153_G2
         rdfs:label          "Glycan:AH-153_G2" ;
         gco:relative_abundance_percentage
@@ -6512,6 +6590,9 @@ da:DA_116_ReferenceEntity
         glycan:has_association   gd:DA_116_DiseaseAssociation ;
         glycan:is_from_source    da:DA_116_Source ;
         glycan:published_in      da:DA_116_Citation .
+
+da:DA_116_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 uniprot:P01215  a           up:Protein ;
         rdfs:label          "UniProt of DA_116" ;
@@ -6735,6 +6816,9 @@ da:DA_117_ReferenceEntity
         glycan:is_from_source    da:DA_117_Source ;
         glycan:published_in      da:DA_117_Citation .
 
+da:DA_117_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_117_Region_not_provided
         a                       glycan:Glycosylation_site ;
         rdfs:label              "Region not provided of DA_117" ;
@@ -6835,6 +6919,9 @@ da:DA_118_ReferenceEntity
         glycan:has_association   gd:DA_118_DiseaseAssociation ;
         glycan:is_from_source    da:DA_118_Source ;
         glycan:published_in      da:DA_118_Citation .
+
+da:DA_118_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gd:complete_hydatidiform_mole
         a              obo:DOID_3590 ;
@@ -7076,6 +7163,9 @@ da:DA_119_ReferenceEntity
         glycan:is_from_source    da:DA_119_Source ;
         glycan:published_in      da:DA_119_Citation .
 
+da:DA_119_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_119_Entity_Set_2_SetItem_1
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_119_Entity_Set_2_SetItem_1_Glycan_AH-153_G1 .
@@ -7215,6 +7305,9 @@ da:DA_120_ReferenceEntity
         glycan:has_association   gd:DA_120_DiseaseAssociation ;
         glycan:is_from_source    da:DA_120_Source ;
         glycan:published_in      da:DA_120_Citation .
+
+da:DA_120_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gtc:G00031MO  rdfs:seeAlso  gtci:G00031MO ;
         dcterms:identifier  "G00031MO" .
@@ -7435,6 +7528,9 @@ da:DA_121_ReferenceEntity
         glycan:is_from_source    da:DA_121_Source ;
         glycan:published_in      da:DA_121_Citation .
 
+da:DA_121_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_121  a                       gn:Abundance ;
         rdfs:label                 "DiseaseAbundance DOI: PMID:3335536 ISBN: Table4\n AH-160 2018-10-22" ;
         gn:has_reference_compound  da:DA_121_ReferenceEntity ;
@@ -7516,6 +7612,9 @@ da:DA_122_ReferenceEntity
         glycan:has_association   gd:DA_122_DiseaseAssociation ;
         glycan:is_from_source    da:DA_122_Source ;
         glycan:published_in      da:DA_122_Citation .
+
+da:DA_122_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 uniprot:P01215  a           up:Protein ;
         rdfs:label          "UniProt of DA_122" ;
@@ -7752,6 +7851,9 @@ da:DA_123_ReferenceEntity
         glycan:is_from_source    da:DA_123_Source ;
         glycan:published_in      da:DA_123_Citation .
 
+da:DA_123_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 gd:metastatic_choriocarcinoma
         a              obo:DOID_3594 ;
         rdfs:label     "metastatic choriocarcinoma" ;
@@ -7859,6 +7961,9 @@ da:DA_124_ReferenceEntity
         glycan:has_association   gd:DA_124_DiseaseAssociation ;
         glycan:is_from_source    da:DA_124_Source ;
         glycan:published_in      da:DA_124_Citation .
+
+da:DA_124_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_124_Entity_Saccharide_AH-153_G1
         a                   glycan:Saccharide ;
@@ -8043,6 +8148,9 @@ da:DA_131_ReferenceEntity
         glycan:has_association   gd:DA_131_DiseaseAssociation ;
         glycan:is_from_source    da:DA_131_Source ;
         glycan:published_in      da:DA_131_Citation .
+
+da:DA_131_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 gd:DA_131_DiseaseAssociation
         a               codao:CompoundDiseaseAssosiation ;
@@ -8465,6 +8573,9 @@ da:DA_132_ReferenceEntity
         glycan:is_from_source    da:DA_132_Source ;
         glycan:published_in      da:DA_132_Citation .
 
+da:DA_132_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_132_Entity_Saccharide_AH-5_G10
         skos:exactMatch  da:DA_132_Entity_Set_2_SetItem_10_Glycan_AH-5_G10 .
 
@@ -8862,6 +8973,9 @@ da:DA_133_ReferenceEntity
         glycan:is_from_source    da:DA_133_Source ;
         glycan:published_in      da:DA_133_Citation .
 
+da:DA_133_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_133_Entity_Saccharide_AH-5_G2
         a                glycan:Saccharide ;
         rdfs:label       "AH-5_G2" ;
@@ -9001,6 +9115,9 @@ da:DA_134_ReferenceEntity
         glycan:has_association   gd:DA_134_DiseaseAssociation ;
         glycan:is_from_source    da:DA_134_Source ;
         glycan:published_in      da:DA_134_Citation .
+
+da:DA_134_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_134_Source  a  glycan:Source_natural ;
         rdfs:label  "Source of DA_134" .
@@ -9291,6 +9408,9 @@ da:DA_135_ReferenceEntity
         gco:has_saccharide_part  da:DA_135_ReferencedSaccharide ;
         glycan:is_from_source    da:DA_135_Source ;
         glycan:published_in      da:DA_135_Citation .
+
+da:DA_135_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_135_Entity_Set_2_SetItem_3_Glycan_AH-5_G3
         rdfs:label          "Glycan:AH-5_G3" ;
@@ -9900,6 +10020,9 @@ da:DA_136_ReferenceEntity
         glycan:is_from_source    da:DA_136_Source ;
         glycan:published_in      da:DA_136_Citation .
 
+da:DA_136_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 gd:DA_136_DiseaseAssociation
         a               codao:CompoundDiseaseAssosiation ;
         rdfs:label      "Disease_Association of DA_136" ;
@@ -10128,6 +10251,9 @@ da:DA_137_ReferenceEntity
         glycan:has_association   gd:DA_137_DiseaseAssociation ;
         glycan:is_from_source    da:DA_137_Source ;
         glycan:published_in      da:DA_137_Citation .
+
+da:DA_137_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_137_Entity_Set_2_SetItem_3_Glycan_AH-5_G3
         rdfs:label          "Glycan:AH-5_G3" ;
@@ -10847,6 +10973,9 @@ da:DA_138_ReferenceEntity
         glycan:is_from_source    da:DA_138_Source ;
         glycan:published_in      da:DA_138_Citation .
 
+da:DA_138_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 uniprot:P0DN87  a           up:Protein ;
         rdfs:label          "UniProt of DA_138" ;
         dcterms:identifier  "P0DN87" .
@@ -11204,6 +11333,9 @@ da:DA_139_ReferenceEntity
         glycan:has_association   gd:DA_139_DiseaseAssociation ;
         glycan:is_from_source    da:DA_139_Source ;
         glycan:published_in      da:DA_139_Citation .
+
+da:DA_139_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_139_Entity_Saccharide_AH-5_G2
         a                glycan:Saccharide ;
@@ -12651,6 +12783,9 @@ da:DA_161_ReferenceEntity
         gco:has_saccharide_part  da:DA_161_ReferencedSaccharide ;
         glycan:is_from_source    da:DA_161_Source ;
         glycan:published_in      da:DA_161_Citation .
+
+da:DA_161_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_161_Entity_Set_12_SetItem_30_Glycan_AH-8_G30
         rdfs:label          "Glycan:AH-8_G30" ;
@@ -14227,6 +14362,9 @@ da:DA_162_ReferenceEntity
         glycan:is_from_source    da:DA_162_Source ;
         glycan:published_in      da:DA_162_Citation .
 
+da:DA_162_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_162_Entity_Saccharide_AH-180_G12
         a                   glycan:Saccharide ;
         rdfs:label          "id:AH-180_G12" ;
@@ -14822,6 +14960,9 @@ da:DA_163_ReferenceEntity
         gco:has_saccharide_part  da:DA_163_ReferencedSaccharide ;
         glycan:is_from_source    da:DA_163_Source ;
         glycan:published_in      da:DA_163_Citation .
+
+da:DA_163_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_163_Entity_Set_2_SetItem_5
         a             sio:SIO_001258 ;
@@ -15565,6 +15706,9 @@ da:DA_168_ReferenceEntity
         glycan:is_from_source    da:DA_168_Source ;
         glycan:published_in      da:DA_168_Citation .
 
+da:DA_168_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 <http://purl.jp/bio/12/glyco/glyconavi/DiseaseAbun#DA_168_Region_Asn38;Asn65>
         a                       glycan:Glycosylation_site ;
         rdfs:label              "Region Asn38;Asn65 of DA_168" ;
@@ -15951,6 +16095,9 @@ da:DA_174_ReferenceEntity
         glycan:is_from_source    da:DA_174_Source ;
         glycan:published_in      da:DA_174_Citation .
 
+da:DA_174_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
+
 da:DA_174_Entity_Set_2_SetItem_5
         a             sio:SIO_001258 ;
         gn:is_glycan  da:DA_174_Entity_Set_2_SetItem_5_Glycan_AH-10_G5 .
@@ -16103,6 +16250,9 @@ da:DA_175_ReferenceEntity
         glycan:has_association   gd:DA_175_DiseaseAssociation ;
         glycan:is_from_source    da:DA_175_Source ;
         glycan:published_in      da:DA_175_Citation .
+
+da:DA_175_Source glycan:has_taxon <http://identifiers.org/taxonomy/9606> .
+<http://identifiers.org/taxonomy/9606> rdfs:label "Homo sapiens" .
 
 da:DA_175_Entity_Saccharide_AH-10_G10
         skos:exactMatch  da:DA_175_Entity_Set_2_SetItem_10_Glycan_AH-10_G10 .
@@ -16365,34 +16515,3 @@ da:DA_175_Protein  a           glycan:Glycoprotein ;
         rdfs:label             "Protein of DA_175" ;
         rdfs:seeAlso           uniprot:P01588 ;
         gco:amino_acid_length  "0"^^xsd:int .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
