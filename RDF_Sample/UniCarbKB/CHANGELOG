@@ -1,0 +1,15 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+
+## 03-12-2019
+
+### Added
+- sparql-dev.unicarbkb.org 
+- sparql.unicarbkb.org
+
+### Changed
+- Updated referenced_glyconjugate protein and saccharide URIs due to duplicate results from sparql query 
+
+### Removed 
