@@ -120,16 +120,13 @@ order by ?g ?tissue ?cell_line ?taxon
 
 * SPARQL endpoint: https://sparql.glycoinfo.org/sparql
 
-[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Citation+part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0D%0Aprefix+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%28str+%28%3Fpmid+%29+AS+%3FPMID+%29%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E%7D%0D%0A%0D%0A%0D%0A%3Fglycoconjugate_ref+glycan%3Apublished_in+%3Fcitation+.%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%0D%0A%0D%0A%23+glyconnect%0D%0A%7B%0D%0A%3Fcitation+foaf%3AprimaryTopic+%3Fpubmed+.%0D%0ABIND%28REPLACE%28str+%28+%3Fpubmed+%29%2C+%27http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F%27%2C+%27%27%29+AS+%3Fpmid%29%0D%0A%7D%0D%0Aunion%0D%0A%23+unicarbkb%0D%0A%7B%0D%0A%3Fcitation+owl%3AsameAs+%3Fpubmed+.+%0D%0A%3Fcitation+glycan%3Ahas_pmid+%3Fpmid+.%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%09%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Apublished_in+%3Fcitation+.%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%3Fcitation++rdfs%3AseeAlso+%3Fpubmed+.+%0D%0A%3Fpubmed+dcterms%3Aidentifier+%3Fpmid+.%0D%0A%0D%0A%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on)
+[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Citation+part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%28str+%28%3Fpmid+%29+AS+%3FPMID+%29%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E%7D%0D%0A%0D%0A%0D%0A%3Fglycoconjugate_ref+glycan%3Apublished_in+%3Fcitation+.%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%0D%0A%0D%0A%23+glyconnect+%26+unicarbkb%0D%0A%0D%0A%3Fcitation++dcterms%3Areferences+%3Fpubmed+.+%0D%0A++++++++++%3Fcitation+glycan%3Ahas_pmid+%3Fpmid+.%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%09%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Apublished_in+%3Fcitation+.%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%3Fcitation++dcterms%3Areferences+%3Fpubmed+.+%0D%0A++++++++++%3Fcitation+glycan%3Ahas_pmid+%3Fpmid+.%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Fpmid%0D%0A&format=text%2Fhtml&timeout=0&debug=on)
 
 ```
 # Citation part
 prefix glycan:<http://purl.jp/bio/12/glyco/glycan#>
-prefix foaf:<http://xmlns.com/foaf/0.1/>
 prefix gco:<http://purl.jp/bio/12/glyco/conjugate#>
-prefix faldo:<http://biohackathon.org/resource/faldo#>
 prefix dcterms:<http://purl.org/dc/terms/>
-prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 select distinct ?g ?uniprot_id (str (?pmid ) AS ?PMID )
@@ -148,17 +145,10 @@ VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconnect> <http://glycoinfo.org/gl
 VALUES ?uniprot_id { "P00738" }
 
 
-# glyconnect
-{
-?citation foaf:primaryTopic ?pubmed .
-BIND(REPLACE(str ( ?pubmed ), 'http://www.ncbi.nlm.nih.gov/pubmed/', '') AS ?pmid)
-}
-union
-# unicarbkb
-{
-?citation owl:sameAs ?pubmed . 
-?citation glycan:has_pmid ?pmid .
-}
+# glyconnect & unicarbkb
+
+?citation  dcterms:references ?pubmed . 
+          ?citation glycan:has_pmid ?pmid .
 }
     }
     UNION
@@ -169,19 +159,17 @@ graph ?g {
 VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconavi>}
 ?glycoconjugate_ref glycan:published_in ?citation .
 ?glycoconjugate_ref gco:has_protein_part ?protein_part .
-
 ?protein_part gco:has_protein ?protein .
 ?protein rdfs:seeAlso ?uniprot .
 ?uniprot dcterms:identifier ?uniprot_id .
 VALUES ?uniprot_id { "P00738" }
-?citation  rdfs:seeAlso ?pubmed . 
-?pubmed dcterms:identifier ?pmid .
-
-
+?citation  dcterms:references ?pubmed . 
+          ?citation glycan:has_pmid ?pmid .
 }
 }
     }
 }
+order by ?g ?pmid
 ```
 
 # Glycan Part
