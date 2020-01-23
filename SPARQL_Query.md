@@ -127,10 +127,6 @@ optional{
 }
 
 ?ref_conjugate gco:has_protein_part ?ref_protein .
-?ref_protein gco:glycosylated_at ?region .
-?region faldo:location ?location .
-OPTIONAL { ?location rdfs:label ?location_label . }
-?location faldo:position ?position .
 ?ref_protein gco:has_protein ?protein .
 ?protein rdfs:seeAlso ?uniprot .
 ?uniprot dcterms:identifier ?uniprot_id .
