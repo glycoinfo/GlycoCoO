@@ -2,7 +2,7 @@
 
 * SPARQL endpoint: https://sparql.glycoinfo.org/sparql
 
-[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=PREFIX+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0APREFIX+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2008%2F05%2Fskos%23%3E%0D%0APREFIX+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0APREFIX+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fg+%3Fdisease_label+%3Fnotation+%3Funiprot_id%0D%0AWHERE%0D%0A%7B%0D%0A%09%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ahas_association+%3Fassociation+%3B%0D%0Agco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fassociation+sio%3ASIO_000628+%3Fdisease+.%0D%0A%3Fdisease+rdfs%3Alabel+%3Fdisease_label+.%0D%0A%3Fdisease+skos%3Anotation+%7C+rdfs%3AseeAlso+%3Fnotation+.%0D%0A%23+GlyConnect%0D%0A%7B%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0AUNION%0D%0A%23+UniCarbKB%0D%0A%7B%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0AUNION%0D%0A%7B%0D%0A%23+GlycoNAVI%0D%0A%09SERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ahas_association+%3Fassociation+%3B%0D%0Agco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fassociation+sio%3ASIO_000628+%3Fdisease+.%0D%0A%3Fdisease+rdfs%3Alabel+%3Fdisease_label+.%0D%0A%3Fdisease+skos%3Anotation+%3Fnotation+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0AORDER+BY+%3Fg&format=text%2Fhtml&timeout=0&debug=on)
+[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=PREFIX+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0APREFIX+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0APREFIX+skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2008%2F05%2Fskos%23%3E%0D%0APREFIX+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0APREFIX+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fg+%3Fdisease_label+%3Fnotation+%3Funiprot_id%0D%0AWHERE%0D%0A%7B%0D%0A%09%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ahas_association+%3Fassociation+%3B%0D%0Agco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fassociation+sio%3ASIO_000628+%3Fdisease+.%0D%0A%3Fdisease+rdfs%3Alabel+%3Fdisease_label+.%0D%0A%3Fdisease+skos%3Anotation+%7C+rdfs%3AseeAlso+%3Fnotation+.%0D%0A%23+GlyConnect%E3%80%80%26+UniCarbKB%0D%0A%7B%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0AUNION%0D%0A%7B%0D%0A%23+GlycoNAVI%0D%0A%09SERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ahas_association+%3Fassociation+%3B%0D%0Agco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fassociation+sio%3ASIO_000628+%3Fdisease+.%0D%0A%3Fdisease+rdfs%3Alabel+%3Fdisease_label+.%0D%0A%3Fdisease+skos%3Anotation+%3Fnotation+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0A%7D%0D%0AORDER+BY+%3Fg&format=text%2Fhtml&timeout=0&debug=on)
 
 ```
 PREFIX glycan:<http://purl.jp/bio/12/glyco/glycan#>
@@ -23,18 +23,11 @@ gco:has_protein_part ?protein_part .
 ?association sio:SIO_000628 ?disease .
 ?disease rdfs:label ?disease_label .
 ?disease skos:notation | rdfs:seeAlso ?notation .
-# GlyConnect
+# GlyConnect　& UniCarbKB
 {
 ?protein_part gco:has_protein ?protein .
 ?protein rdfs:seeAlso ?uniprot .
 ?uniprot dcterms:identifier ?uniprot_id .
-VALUES ?uniprot_id { "P00738" }
-}
-UNION
-# UniCarbKB
-{
-?protein_part gco:has_protein ?protein .
-?protein dcterms:identifier ?uniprot_id .
 VALUES ?uniprot_id { "P00738" }
 }
 }
