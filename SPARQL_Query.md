@@ -58,7 +58,7 @@ ORDER BY ?g
 
 * SPARQL endpoint: https://sparql.glycoinfo.org/sparql
 
-[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Source+Part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+up%3A+%3Chttp%3A%2F%2Fpurl.uniprot.org%2Fcore%2F%3E%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%3Ftissue+%3Fcell_line+%3Forganism+%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ais_from_source+%3Fsource+%3B%0D%0A+++++++++++++++++++++++++++++++++++++gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_tissue+%3Ftissue+.%7D%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_cell_line+%3Fcell_line+.%7D%0D%0A%23optional%7B%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%7D%0D%0A%0D%0A%23+glyconnect%0D%0A%7B%0D%0Aoptional+%7B%0D%0A%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%0D%0A%3Ftaxon+rdfs%3Alabel+%3Forganism+.%0D%0A%7D%0D%0A%0D%0A%3Fprotein_part+gco%3Aglycosylated_at+%3Fprotein+.%0D%0A%3Fprotein+faldo%3Alocation+%3Flocation+.%0D%0A%3Flocation+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3FExactPosition+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Flocation+a+faldo%3AExactPosition+.%0D%0AFILTER+CONTAINS+%28str%28%3Funiprot%29%2C+%3Funiprot_id%29%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0Aunion%0D%0A%23+unicarbkb%0D%0A%7B%0D%0Aoptional%7B%0D%0A%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%0D%0A%3Ftaxon+up%3AscientificName+%3Forganism+.%0D%0A%7D%0D%0A%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%0D%0A%3Fglycoconjugate_ref+glycan%3Ais_from_source+%3Fsource+%3B%0D%0A+++++++++++++++++++++++++++++++++++++gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_tissue+%3Ftissue+.%7D%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_cell_line+%3Fcell_line+.%7D%0D%0Aoptional%7B%0D%0A%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%0D%0A%3Ftaxon+rdfs%3Alabel+%3Forganism+.%0D%0A%7D%0D%0A%0D%0A%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein+.%0D%0A%3Fref_protein+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Ftissue+%3Fcell_line+%3Ftaxon&format=text%2Fhtml&timeout=0&debug=on)
+[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Source+Part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+up%3A+%3Chttp%3A%2F%2Fpurl.uniprot.org%2Fcore%2F%3E%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%3Ftissue+%3Fcell_line+%3Forganism+%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%3Fglycoconjugate_ref+glycan%3Ais_from_source+%3Fsource+%3B+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0Aoptional+%7B+%3Fsource+glycan%3Ahas_tissue+%3Ftissue+.+%7D%0D%0Aoptional+%7B+%3Fsource+glycan%3Ahas_cell_line+%3Fcell_line+.+%7D%0D%0A%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%0D%0A%23+glyconnect+%26+unicarbkb%0D%0Aoptional+%7B%0D%0A%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%0D%0A+OPTIONAL+%7B+%3Ftaxon+rdfs%3Alabel+%7C+up%3AscientificName++%3Forganism+.+%7D%0D%0A%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%0D%0A%3Fglycoconjugate_ref+glycan%3Ais_from_source+%3Fsource+%3B%0D%0A+++++++++++++++++++++++++++++++++++++gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_tissue+%3Ftissue+.%7D%0D%0Aoptional%7B%3Fsource+glycan%3Ahas_cell_line+%3Fcell_line+.%7D%0D%0Aoptional%7B%0D%0A%3Fsource+glycan%3Ahas_taxon+%3Ftaxon+.%0D%0A%3Ftaxon+rdfs%3Alabel+%3Forganism+.%0D%0A%7D%0D%0A%0D%0A%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein+.%0D%0A%3Fref_protein+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Ftissue+%3Fcell_line+%3Ftaxon%0D%0A&format=text%2Fhtml&timeout=0&debug=on)
 
 ```
 # Source Part
@@ -75,38 +75,20 @@ where
     {
 graph ?g {
 VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconnect> <http://glycoinfo.org/glycocoo/unicarbkb> }
-?glycoconjugate_ref glycan:is_from_source ?source ;
-                                     gco:has_protein_part ?protein_part .
-optional{?source glycan:has_tissue ?tissue .}
-optional{?source glycan:has_cell_line ?cell_line .}
-#optional{?source glycan:has_taxon ?taxon .}
-
-# glyconnect
-{
-optional {
-?source glycan:has_taxon ?taxon .
-?taxon rdfs:label ?organism .
-}
-
-?protein_part gco:glycosylated_at ?protein .
-?protein faldo:location ?location .
-?location rdfs:seeAlso ?uniprot .
-?ExactPosition rdfs:seeAlso ?uniprot .
-?location a faldo:ExactPosition .
-FILTER CONTAINS (str(?uniprot), ?uniprot_id)
-VALUES ?uniprot_id { "P00738" }
-}
-union
-# unicarbkb
-{
-optional{
-?source glycan:has_taxon ?taxon .
-?taxon up:scientificName ?organism .
-}
+?glycoconjugate_ref glycan:is_from_source ?source ; gco:has_protein_part ?protein_part .
+optional { ?source glycan:has_tissue ?tissue . }
+optional { ?source glycan:has_cell_line ?cell_line . }
 
 ?protein_part gco:has_protein ?protein .
-?protein dcterms:identifier ?uniprot_id .
+?protein rdfs:seeAlso ?uniprot .
+?uniprot dcterms:identifier ?uniprot_id .
 VALUES ?uniprot_id { "P00738" }
+
+# glyconnect & unicarbkb
+optional {
+?source glycan:has_taxon ?taxon .
+ OPTIONAL { ?taxon rdfs:label | up:scientificName  ?organism . }
+
 }
 }
     }
