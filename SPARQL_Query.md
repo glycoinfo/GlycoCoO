@@ -175,7 +175,7 @@ order by ?g ?pmid
 # Glycan Part
 * SPARQL endpoint: https://sparql.glycoinfo.org/sparql
 
-[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Glycan+Part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0Aprefix+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0Aselect+distinct+%3Fg+%3Funiprot_id++%3Fglytoucan_id%0D%0Awhere%0D%0A%7B%0D%0A++++++%7B%0D%0Agraph+%3Fg%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%0D%0A%23+glyconnect+%26+unicarbkb%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_saccharide_part+%3Fref_sac+.%0D%0A%3Fref_sac++glycan%3Ahas_glycan+%3Fsaccharide+.%0D%0A%3Fsaccharide+foaf%3AprimaryTopicOf+%3Fglytoucan+.%0D%0A%3Fglytoucan+dcterms%3Aidentifier+%3Fglytoucan_id+.%0D%0A%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%09%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E+%7D%0D%0A%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_saccharide_part+%3Fref_sac+.%0D%0A%3Fref_sac++glycan%3Ahas_glycan+%3Fsaccharide+.%0D%0A%3Fsaccharide+foaf%3AprimaryTopicOf+%3Fglytoucan+.%0D%0A%3Fglytoucan+dcterms%3Aidentifier+%3Fglytoucan_id+.%0D%0A%0D%0A%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%0D%0A%7D%0D%0A%09%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Funiprot_id+%3Fglytoucan_id%0D%0A&format=text%2Fhtml&timeout=0&debug=on)
+[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=%23+Glycan+Part%0D%0Aprefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0Aprefix+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0Aselect+distinct+%3Fg+%3Funiprot_id++%3Fglytoucan_id%0D%0Awhere%0D%0A%7B%0D%0A++++++%7B%0D%0A%09%09graph+%3Fg%7B%0D%0A%09%09%09VALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%09%09%09%09%23+GlyConnect+%26+UniCarbKB%0D%0A%09%09%09%09%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%09%09%09%09%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%09%09%09%09%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%09%09%09%09%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%09%09%09%09%3Fglycoconjugate_ref+gco%3Ahas_saccharide_part+%3Fref_sac+.%0D%0A%09%09%09%09%3Fref_sac++glycan%3Ahas_glycan+%3Fsaccharide+.%0D%0A%09%09%09%09%3Fsaccharide+foaf%3AprimaryTopicOf+%3Fglytoucan+.%0D%0A%09%09%09%09%3Fglytoucan+dcterms%3Aidentifier+%3Fglytoucan_id+.%0D%0A%09%09%09%7D%0D%0A%09++++%7D%0D%0A%09++++UNION%0D%0A%09++++%7B%0D%0A%09%09%23+GlycoNAVI%0D%0A%09%09SERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0A%09%09%09graph+%3Fg+%7B%0D%0A%09%09%09%09VALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E+%7D%0D%0A%09%09%09%09%3Fglycoconjugate_ref+gco%3Ahas_protein_part+%3Fprotein_part+.%0D%0A%09%09%09%09%3Fprotein_part+gco%3Ahas_protein+%3Fprotein+.%0D%0A%09%09%09%09%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%09%09%09%09%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%09%09%09%09%3Fglycoconjugate_ref+gco%3Ahas_saccharide_part+%3Fref_sac+.%0D%0A%09%09%09%09%3Fref_sac++glycan%3Ahas_glycan+%3Fsaccharide+.%0D%0A%09%09%09%09%3Fsaccharide+foaf%3AprimaryTopicOf+%3Fglytoucan+.%0D%0A%09%09%09%09%3Fglytoucan+dcterms%3Aidentifier+%3Fglytoucan_id+.%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Funiprot_id+%3Fglytoucan_id%0D%0A&format=text%2Fhtml&timeout=0&debug=on)
 
 ```
 # Glycan Part
@@ -208,14 +208,14 @@ where
 		SERVICE <https://sparql.glyconavi.org/sparql> {
 			graph ?g {
 				VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconavi> }
-				?glycoconjugate_ref gco:has_saccharide_part ?ref_sac .
-				?ref_sac  glycan:has_glycan ?saccharide .
-				?saccharide foaf:primaryTopicOf ?glytoucan .
-				?glytoucan dcterms:identifier ?glytoucan_id .
 				?glycoconjugate_ref gco:has_protein_part ?protein_part .
 				?protein_part gco:has_protein ?protein .
 				?protein rdfs:seeAlso ?uniprot .
 				?uniprot dcterms:identifier ?uniprot_id .
+				?glycoconjugate_ref gco:has_saccharide_part ?ref_sac .
+				?ref_sac  glycan:has_glycan ?saccharide .
+				?saccharide foaf:primaryTopicOf ?glytoucan .
+				?glytoucan dcterms:identifier ?glytoucan_id .
 			}
 		}
     }
