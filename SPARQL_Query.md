@@ -226,66 +226,44 @@ order by ?g ?uniprot_id ?glytoucan_id
 
 * SPARQL endpoint: https://sparql.glycoinfo.org/sparql
 
-[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=prefix+glycan%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fglycan%23%3E%0D%0Aprefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+wfaldo%3A%3Chttp%3A%2F%2Fwww.biohackathon.org%2Fresource%2Ffaldo%2F%3E%0D%0Aprefix+sio%3A%3Chttp%3A%2F%2Fsemanticscience.org%2Fresource%2F%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%3Flocation_label+%28str%28%3Fposition%29+AS+%3Fsite%29+%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%0D%0A%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein.%0D%0A%7B%0D%0A%23+http%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%0D%0A%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein+.%0D%0A%3Fref_protein+gco%3Aglycosylated_at+%3FRegion+.%0D%0A%3FRegion+faldo%3Alocation+%3FExactPosition+.%0D%0A%3FExactPosition+faldo%3Aposition+%3Fposition+.%0D%0A%3FExactPosition+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Flocation+a+faldo%3AExactPosition+.%0D%0AFILTER+CONTAINS+%28str%28%3Funiprot%29%2C+%3Funiprot_id%29%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0AUNION%0D%0A%7B%0D%0A%23+http%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0AFILTER+CONTAINS+%28str%28%3Fref_protein%29%2C+%3Funiprot_id%29%0D%0A%3Fref_protein+gco%3Aglycosylated_at+%3FRegion+.%0D%0A%3FRegion+wfaldo%3AExactPosition+%3FExactPosition+.%0D%0A%3FExactPosition+wfaldo%3Aposition+%3Fposition+.%0D%0AOPTIONAL+%7B+%3FExactPosition++gco%3Ahas_amino_acid+%3Famino_acid+.+%7D%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%09%23+GlycoNAVI%0D%0ASERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein+.%0D%0A%3Fref_protein+gco%3Aglycosylated_at+%3Fregion+.%0D%0A%3Fregion+faldo%3Alocation+%3Flocation+.%0D%0AOPTIONAL+%7B+%3Flocation+rdfs%3Alabel+%3Flocation_label+.+%7D%0D%0A%3Flocation+faldo%3Aposition+%3Fposition+.%0D%0A%3Fref_protein+gco%3Ahas_protein+%3Fprotein+.%0D%0A%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0AVALUES+%3Funiprot_id+%7B+%22P00738%22+%7D%0D%0A%7D%0D%0A%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Fposition+&format=text%2Fhtml&timeout=0&debug=on)
+[run](https://sparql.glycoinfo.org/sparql?default-graph-uri=&query=prefix+gco%3A%3Chttp%3A%2F%2Fpurl.jp%2Fbio%2F12%2Fglyco%2Fconjugate%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aprefix+faldo%3A%3Chttp%3A%2F%2Fbiohackathon.org%2Fresource%2Ffaldo%23%3E%0D%0Aprefix+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0Aselect+distinct+%3Fg+%3Funiprot_id+%28str%28%3Fposition%29+AS+%3Fsite%29+%0D%0Awhere%0D%0A%7B%0D%0A++++%7B%0D%0Agraph+%3Fg+%7B%0D%0AVALUES+%3Fg+%7B++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconnect%3E+%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Funicarbkb%3E+%7D%0D%0A%09%23+GlyConnect+and+UniCarbKB%0D%0A%09%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein.%0D%0A%09%3Fref_protein+gco%3Aglycosylated_at+%3Fregion+.%0D%0A%09%3Fregion+faldo%3Alocation+%3Flocation+.%0D%0A%09%3Flocation+faldo%3Aposition+%3Fposition+.%0D%0A%09%3Fref_protein+gco%3Ahas_protein+%3Fprotein+.%0D%0A%09%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%09%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%7D%0D%0A++++%7D%0D%0A++++UNION%0D%0A++++%7B%0D%0A%09%09%23+GlycoNAVI%0D%0A%09%09SERVICE+%3Chttps%3A%2F%2Fsparql.glyconavi.org%2Fsparql%3E+%7B%0D%0A%09%09%09graph+%3Fg+%7B%0D%0A%09%09%09VALUES+%3Fg+%7B+++%3Chttp%3A%2F%2Fglycoinfo.org%2Fglycocoo%2Fglyconavi%3E++%7D%0D%0A%09%09%09%3Fref_conjugate+gco%3Ahas_protein_part+%3Fref_protein+.%0D%0A%09%09%09%3Fref_protein+gco%3Aglycosylated_at+%3Fregion+.%0D%0A%09%09%09%3Fregion+faldo%3Alocation+%3Flocation+.%0D%0A%09%09%09%3Flocation+faldo%3Aposition+%3Fposition+.%0D%0A%09%09%09%3Fref_protein+gco%3Ahas_protein+%3Fprotein+.%0D%0A%09%09%09%3Fprotein+rdfs%3AseeAlso+%3Funiprot+.%0D%0A%09%09%09%3Funiprot+dcterms%3Aidentifier+%3Funiprot_id+.%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A++++%7D%0D%0A%7D%0D%0Aorder+by+%3Fg+%3Fposition+&format=text%2Fhtml&timeout=0&debug=on)
 
 ```
-prefix glycan:<http://purl.jp/bio/12/glyco/glycan#>
 prefix gco:<http://purl.jp/bio/12/glyco/conjugate#>
 prefix dcterms:<http://purl.org/dc/terms/>
 prefix faldo:<http://biohackathon.org/resource/faldo#>
-prefix wfaldo:<http://www.biohackathon.org/resource/faldo/>
-prefix sio:<http://semanticscience.org/resource/>
 prefix dcterms:<http://purl.org/dc/terms/>
-prefix foaf:<http://xmlns.com/foaf/0.1/>
-
-select distinct ?g ?uniprot_id ?location_label (str(?position) AS ?site) 
+select distinct ?g ?uniprot_id (str(?position) AS ?site) 
 where
 {
     {
 graph ?g {
 VALUES ?g {  <http://glycoinfo.org/glycocoo/glyconnect> <http://glycoinfo.org/glycocoo/unicarbkb> }
-
-?ref_conjugate gco:has_protein_part ?ref_protein.
-{
-# http://glycoinfo.org/glycocoo/glyconnect
-?ref_conjugate gco:has_protein_part ?ref_protein .
-?ref_protein gco:glycosylated_at ?Region .
-?Region faldo:location ?ExactPosition .
-?ExactPosition faldo:position ?position .
-?ExactPosition rdfs:seeAlso ?uniprot .
-?location a faldo:ExactPosition .
-FILTER CONTAINS (str(?uniprot), ?uniprot_id)
-VALUES ?uniprot_id { "P00738" }
-}
-UNION
-{
-# http://glycoinfo.org/glycocoo/unicarbkb
-VALUES ?uniprot_id { "P00738" }
-FILTER CONTAINS (str(?ref_protein), ?uniprot_id)
-?ref_protein gco:glycosylated_at ?Region .
-?Region wfaldo:ExactPosition ?ExactPosition .
-?ExactPosition wfaldo:position ?position .
-OPTIONAL { ?ExactPosition  gco:has_amino_acid ?amino_acid . }
-}
+	# GlyConnect and UniCarbKB
+	?ref_conjugate gco:has_protein_part ?ref_protein.
+	?ref_protein gco:glycosylated_at ?region .
+	?region faldo:location ?location .
+	?location faldo:position ?position .
+	?ref_protein gco:has_protein ?protein .
+	?protein rdfs:seeAlso ?uniprot .
+	?uniprot dcterms:identifier ?uniprot_id .
 }
     }
     UNION
     {
-	# GlycoNAVI
-SERVICE <https://sparql.glyconavi.org/sparql> {
-graph ?g {
-VALUES ?g {   <http://glycoinfo.org/glycocoo/glyconavi>  }
-?ref_conjugate gco:has_protein_part ?ref_protein .
-?ref_protein gco:glycosylated_at ?region .
-?region faldo:location ?location .
-OPTIONAL { ?location rdfs:label ?location_label . }
-?location faldo:position ?position .
-?ref_protein gco:has_protein ?protein .
-?protein rdfs:seeAlso ?uniprot .
-?uniprot dcterms:identifier ?uniprot_id .
-VALUES ?uniprot_id { "P00738" }
-}
-}
+		# GlycoNAVI
+		SERVICE <https://sparql.glyconavi.org/sparql> {
+			graph ?g {
+			VALUES ?g {   <http://glycoinfo.org/glycocoo/glyconavi>  }
+			?ref_conjugate gco:has_protein_part ?ref_protein .
+			?ref_protein gco:glycosylated_at ?region .
+			?region faldo:location ?location .
+			?location faldo:position ?position .
+			?ref_protein gco:has_protein ?protein .
+			?protein rdfs:seeAlso ?uniprot .
+			?uniprot dcterms:identifier ?uniprot_id .
+			}
+		}
     }
 }
 order by ?g ?position 
