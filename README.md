@@ -31,7 +31,7 @@ An overview of all database providers generated GlycoCoO file is available in th
 
 ## Citation
 
-* The Glycoconjugate Ontology GlycoCoO for standardizing the annotation of glycoconjugate data and its application, Issaku Yamada,  Matthew P Campbell,  Nathan Edwards, Leyla Jael Castro,  Frederique Lisacek,  Julien Mariethoz,  Tamiko Ono, Rene Ranzinger,  Daisuke Shinmachi,  Kiyoko F Aoki-Kinoshita, <a href="https://academic.oup.com/glycob/advance-article/doi/10.1093/glycob/cwab013/6144622">Glycobiology</a>, cwab013, PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33677548/">33677548</a> DOI: <a href="https://doi.org/10.1093/glycob/cwab013">10.1093/glycob/cwab013</a>
+* The Glycoconjugate Ontology GlycoCoO for standardizing the annotation of glycoconjugate data and its application, Issaku Yamada,  Matthew P Campbell,  Nathan Edwards, Leyla Jael Castro,  Frederique Lisacek,  Julien Mariethoz,  Tamiko Ono, Rene Ranzinger,  Daisuke Shinmachi,  Kiyoko F Aoki-Kinoshita, <a href="https://academic.oup.com/glycob/advance-article/doi/10.1093/glycob/cwab013/6144622">Glycobiology</a>, 2021 Feb 23;cwab013, PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33677548/">33677548</a> DOI: <a href="https://doi.org/10.1093/glycob/cwab013">10.1093/glycob/cwab013</a>
 
   * UniCarbKB: any derivatives must link back to UniCarbKB (data provenance) and cite <a href="https://www.ncbi.nlm.nih.gov/pubmed/24234447">Campbell MP et al., UniCarbKB: building a knowledge platform for glycoproteomics,Nucleic Acids Res. 2014 Jan;42(Database issue):D215-21.</a>. This includes use of the UniCarbKB stylesheet described in the header. 
 
